@@ -310,7 +310,14 @@ if (ownsInstance)
     };
     updateSystemSettings();
     updateTray();
-    service.attachCompanion(createCompanion({service, directory:path.join(app.getPath("userData"),"companion")}));
+    if (service.data.fcm?.credentials?.gcm && !process.argv.includes("--qa"))
+      pairing.listen().catch(() => {});
+    service.attachCompanion(
+      createCompanion({
+        service,
+        directory: path.join(app.getPath("userData"), "companion"),
+      }),
+    );
     const actions = {
       ...service.actions,
       state: () => {
@@ -320,6 +327,11 @@ if (ownsInstance)
       },
       pair: () => pairing.start(),
       cancelPair: () => pairing.cancel(),
+      logout: () => pairing.logout(),
+      openSteamProfile(id) {
+        if (!/^\d{17}$/.test(String(id))) throw Error("Неверный Steam ID");
+        return shell.openExternal("https://steamcommunity.com/profiles/" + id);
+      },
       signInBack: () => signIn.back(),
       signInRetry: () => signIn.retry(),
       listen: () => pairing.listen(),
@@ -351,6 +363,8 @@ if (ownsInstance)
           ![
             "wiki.facepunch.com",
             "rust.wiki",
+            "rust-data.com",
+            "rust.facepunch.com",
             "github.com",
             "rustontop.com",
             "discord.com",

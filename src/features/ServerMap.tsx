@@ -8,6 +8,12 @@ import {
 } from "react";
 import {
   Flame,
+  House,
+  Mountain,
+  Route,
+  Settings2,
+  Star,
+  BookOpen,
   Grid2X2,
   LocateFixed,
   MapPin,
@@ -33,6 +39,15 @@ import { translate } from "../localization";
 import { Action } from "./ConnectionViews";
 import { Offline } from "./ServerViews";
 import MapHeatmap, { HeatmapLegend } from "./MapHeatmap";
+import TerrainOverlay from "./TerrainOverlay";
+import MapRoutes, { currentMapKey, RouteLayer } from "./MapRoutes";
+import {
+  guideForMonument,
+  monumentName,
+  type MonumentGuide,
+} from "../monuments";
+import { MonumentDetails } from "./Monuments";
+import { readElevation } from "../../shared/map-overlays.cjs";
 
 type Props = {
   state: AppState;
@@ -148,6 +163,19 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
   const [grid, setGrid] = useState(true);
   const [team, setTeam] = useState(true);
   const [heat, setHeat] = useState(false);
+  const [heatControls, setHeatControls] = useState(false);
+  const [terrain, setTerrain] = useState(false);
+  const [monuments, setMonuments] = useState(true);
+  const [routesVisible, setRoutesVisible] = useState(false);
+  const [routesOpen, setRoutesOpen] = useState(false);
+  const [selectedRoutes, setSelectedRoutes] = useState<Set<string> | null>(
+    null,
+  );
+  const [selectedGuide, setSelectedGuide] = useState<MonumentGuide | null>(
+    null,
+  );
+  const [pinKind, setPinKind] = useState("pin");
+  const [cursorHeight, setCursorHeight] = useState<number | null>(null);
   const [category, setCategory] = useState("ores");
   const [opacity, setOpacity] = useState(0.75);
   const [pinMode, setPinMode] = useState(false);
@@ -158,8 +186,30 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
   const image = useMemo(() => {
     const ratio = map ? map.width / map.height : 1;
     const width = Math.min(size.width, size.height * ratio);
-    return { width, height: width / ratio };
+    return {
+      width,
+      height: width / ratio,
+      maxScale: Math.max(
+        1,
+        Math.min(8, (map?.width || width) / Math.max(1, width)),
+      ),
+    };
   }, [map?.width, map?.height, size]);
+  const elevation = state.heatmap?.elevation;
+  const elevationBytes = useMemo(
+    () =>
+      elevation
+        ? Uint8Array.from(atob(elevation.values), (c) => c.charCodeAt(0))
+        : null,
+    [elevation?.values],
+  );
+  const routeKey = currentMapKey(state);
+  const visibleRoutes = state.routes.filter(
+    (route) =>
+      route.serverId === state.connection.serverId &&
+      route.mapKey === routeKey &&
+      (selectedRoutes === null || selectedRoutes.has(route.id)),
+  );
   const geometry = useRef({ size, image });
   geometry.current = { size, image };
   viewRef.current = view;
@@ -286,6 +336,16 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
         (map!.height - map!.oceanMargin * 2)) *
       worldSize;
     setCursorGrid(gridLabel(x, y, worldSize));
+    setCursorHeight(
+      elevation && elevationBytes
+        ? readElevation(
+            elevationBytes,
+            elevation.resolution,
+            x / worldSize,
+            1 - y / worldSize,
+          )
+        : null,
+    );
   }
   function endDrag(event: PointerEvent<HTMLDivElement>) {
     const active = drag.current;
@@ -296,7 +356,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
     if (!active || active.moved || !pinMode || !pinName.trim()) return;
     const point = pointAt(event.clientX, event.clientY);
     if (point.x < 0 || point.x > 1 || point.y < 0 || point.y > 1) return;
-    void runAction("addPin", { name: pinName.trim(), ...point })
+    void runAction("addPin", { name: pinName.trim(), kind: pinKind, ...point })
       .then(() => {
         setPinMode(false);
         setPinName("");
@@ -331,19 +391,103 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
           <button
             className={heat ? "active" : ""}
             aria-pressed={heat}
-            onClick={() => setHeat(!heat)}
+            onClick={() => {
+              setHeat(!heat);
+              setHeatControls(!heat);
+            }}
           >
             <Flame size={16} />
             Хитмап
           </button>
+          {heat && (
+            <button
+              className="icon-button"
+              aria-label="Настройки хитмапа"
+              aria-expanded={heatControls}
+              onClick={() => setHeatControls(!heatControls)}
+            >
+              <Settings2 size={15} />
+            </button>
+          )}
+          <button
+            className={terrain ? "active" : ""}
+            aria-pressed={terrain}
+            disabled={!elevation}
+            title={
+              !elevation
+                ? "Открой сервер в Rust, чтобы загрузить рельеф"
+                : "Рельеф и высота"
+            }
+            onClick={() => setTerrain(!terrain)}
+          >
+            <Mountain size={16} />
+            Рельеф
+          </button>
+          <button
+            className={monuments ? "active" : ""}
+            aria-pressed={monuments}
+            onClick={() => setMonuments(!monuments)}
+          >
+            <BookOpen size={16} />
+            Монументы
+          </button>
+          <button
+            className={routesVisible ? "active" : ""}
+            aria-pressed={routesVisible}
+            onClick={() => {
+              setRoutesOpen(true);
+              setRoutesVisible(true);
+            }}
+          >
+            <Route size={16} />
+            Все маршруты
+          </button>
         </div>
         <div className="map-utilities">
+          <Action
+            className={
+              state.tracking ? "secondary recording-button" : "secondary"
+            }
+            disabled={state.connection.status !== "connected"}
+            task={() => runAction("tracking", !state.tracking)}
+          >
+            <span className="record-dot" />
+            {state.tracking ? "Остановить запись" : "Записать маршрут"}
+          </Action>
+          <button
+            className="icon-button"
+            title="Любимое место"
+            aria-label="Любимое место"
+            onClick={() => {
+              setPinMode(true);
+              setPinKind("favorite");
+              setPinName("Любимое место");
+            }}
+          >
+            <Star size={17} />
+          </button>
+          <button
+            className="icon-button"
+            title="Отметить базу"
+            aria-label="Отметить базу"
+            onClick={() => {
+              setPinMode(true);
+              setPinKind("base");
+              setPinName("Моя база");
+            }}
+          >
+            <House size={17} />
+          </button>
           <button
             className={`icon-button ${pinMode ? "active" : ""}`}
             title="Добавить метку"
             aria-label="Добавить метку"
             aria-pressed={pinMode}
-            onClick={() => setPinMode(!pinMode)}
+            onClick={() => {
+              setPinMode(!pinMode);
+              setPinKind("pin");
+              setPinName("");
+            }}
           >
             <MapPin size={17} />
           </button>
@@ -441,6 +585,19 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             alt={`Карта ${state.info?.name || "сервера"}`}
             draggable={false}
           />
+          {terrain && elevation && (
+            <div
+              className="map-terrain"
+              style={{
+                left: `${(margin / map.width) * 100}%`,
+                top: `${(margin / map.height) * 100}%`,
+                width: `${(1 - (margin * 2) / map.width) * 100}%`,
+                height: `${(1 - (margin * 2) / map.height) * 100}%`,
+              }}
+            >
+              <TerrainOverlay elevation={elevation} />
+            </div>
+          )}
           {heat && state.heatmap && (
             <div
               className="map-density"
@@ -466,15 +623,62 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
               scale={(image.width / map.width) * view.scale}
             />
           )}
+          {routesVisible && (
+            <RouteLayer
+              routes={visibleRoutes}
+              map={map}
+              worldSize={worldSize}
+              pixelScale={(image.width / map.width) * view.scale}
+            />
+          )}
+          {monuments &&
+            map.monuments.map((monument, index) => {
+              const guide = guideForMonument(monument.token);
+              const name = monumentName(
+                monument.token,
+                state.settings.language,
+              );
+              return (
+                <button
+                  key={monument.token + index}
+                  className="map-monument"
+                  style={markerStyle(monument.x, monument.y)}
+                  title={name}
+                  aria-label={name}
+                  disabled={!guide}
+                  onClick={() => setSelectedGuide(guide || null)}
+                >
+                  <BookOpen size={12} />
+                  {view.scale > 1.35 && <span>{name}</span>}
+                </button>
+              );
+            })}
           {team &&
             state.team.map((member) => (
-              <span
+              <button
+                onClick={() =>
+                  void runAction("openSteamProfile", member.steamId).catch(
+                    () => {},
+                  )
+                }
+                aria-label={member.name}
                 key={member.steamId}
                 className={`player-marker ${member.isOnline ? "" : "offline-marker"}`}
                 style={markerStyle(member.x, member.y)}
                 title={member.name}
               >
                 {member.name.slice(0, 2)}
+              </button>
+            ))}
+          {team &&
+            state.mapNotes.map((note, index) => (
+              <span
+                key={index}
+                className="rust-map-note"
+                style={markerStyle(note.x, note.y)}
+                title={t("Метка Rust+")}
+              >
+                <MapPin size={17} />
               </span>
             ))}
           {state.pins
@@ -489,20 +693,26 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                <MapPin size={20} />
+                {pin.kind === "base" ? (
+                  <House size={20} />
+                ) : pin.kind === "favorite" ? (
+                  <Star size={20} />
+                ) : (
+                  <MapPin size={20} />
+                )}
                 <span>{pin.name}</span>
               </span>
             ))}
         </div>
-        {heat && (
+        {heat && heatControls && (
           <div className="map-heat-controls">
             <div className="map-popover-heading">
               <Flame size={16} />
               <strong>Хитмап</strong>
               <button
                 className="icon-button"
-                aria-label="Закрыть хитмап"
-                onClick={() => setHeat(false)}
+                aria-label="Скрыть настройки хитмапа"
+                onClick={() => setHeatControls(false)}
               >
                 <X size={15} />
               </button>
@@ -571,7 +781,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             aria-label="Увеличить карту"
             title="Увеличить карту"
             onClick={() => zoom(1.4)}
-            disabled={view.scale >= 8}
+            disabled={view.scale >= image.maxScale}
           >
             <Plus size={18} />
           </button>
@@ -594,6 +804,11 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
         </div>
         <div className="map-coordinate" aria-label="Квадрат карты">
           {cursorGrid || "·"}
+          {cursorHeight !== null && (
+            <span className="cursor-elevation">
+              {Math.round(cursorHeight)} м
+            </span>
+          )}
         </div>
       </div>
       {state.pins.some((pin) => pin.serverId === state.connection.serverId) && (
@@ -602,8 +817,35 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             .filter((pin) => pin.serverId === state.connection.serverId)
             .map((pin) => (
               <div key={pin.id}>
-                <MapPin size={13} />
-                <span>{pin.name}</span>
+                {pin.kind === "base" ? (
+                  <House size={13} />
+                ) : pin.kind === "favorite" ? (
+                  <Star size={13} />
+                ) : (
+                  <MapPin size={13} />
+                )}
+                <button
+                  className="ghost pin-location"
+                  onClick={() => {
+                    const scale = Math.min(
+                      image.maxScale,
+                      Math.max(view.scale, 2),
+                    );
+                    setView(
+                      clampView(
+                        {
+                          scale,
+                          x: -(pin.x - 0.5) * image.width * scale,
+                          y: -(pin.y - 0.5) * image.height * scale,
+                        },
+                        size,
+                        image,
+                      ),
+                    );
+                  }}
+                >
+                  {pin.name}
+                </button>
                 <Action
                   className="icon-button"
                   label={t("Удалить метку") + " " + pin.name}
@@ -614,6 +856,23 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
               </div>
             ))}
         </div>
+      )}
+      {routesOpen && (
+        <MapRoutes
+          state={state}
+          selected={selectedRoutes}
+          onSelect={setSelectedRoutes}
+          onClose={() => setRoutesOpen(false)}
+          runAction={runAction}
+        />
+      )}
+      {selectedGuide && (
+        <MonumentDetails
+          guide={selectedGuide}
+          language={state.settings.language}
+          onClose={() => setSelectedGuide(null)}
+          runAction={runAction}
+        />
       )}
     </section>
   );

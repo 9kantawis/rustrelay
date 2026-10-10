@@ -1,5 +1,6 @@
 import { DeviceAutomation, SwitchGroups } from "./DeviceAutomation";
 import itemNames from "../../shared/item-names.json";
+import ItemIcon from "../components/ItemIcon";
 import { useState } from "react";
 import {
   Bell,
@@ -86,6 +87,7 @@ export function Servers({ state, runAction }: Props) {
   const [saved, setSaved] = useState(false);
   const pairLabels: Record<string, string> = {
     idle: "Вход ещё не выполнен",
+    "signed-in": "Вход выполнен",
     steam: "Заверши вход через Steam",
     registering: "Регистрируем уведомления",
     listening: "Теперь нажми «Подключить Rust+» в игре",
@@ -128,17 +130,29 @@ export function Servers({ state, runAction }: Props) {
           <div className="form-actions">
             <button
               className="primary"
-              disabled={state.pairStatus === "registering"}
+              disabled={
+                Boolean(state.account) ||
+                ["steam", "registering"].includes(state.pairStatus)
+              }
               onClick={() => void runAction("pair").catch(() => {})}
             >
               <Cable size={16} />
-              {state.pairStatus === "steam"
-                ? "Открыть вход снова"
-                : "Войти через Steam"}
+              {state.account
+                ? "Вход выполнен"
+                : state.pairStatus === "steam"
+                  ? "Выполняется вход"
+                  : state.pairStatus === "registering"
+                    ? "Подключаем Rust+"
+                    : "Войти через Steam"}
             </button>
             {state.pairStatus === "steam" && (
               <Action className="ghost" task={() => runAction("cancelPair")}>
                 Отменить вход
+              </Action>
+            )}
+            {state.account && (
+              <Action className="ghost" task={() => runAction("logout")}>
+                Выйти из аккаунта
               </Action>
             )}
             {state.hasPairing && (
@@ -188,6 +202,7 @@ export function Servers({ state, runAction }: Props) {
                     ) : (
                       <Action
                         className="primary"
+                        disabled={state.requiresSignIn}
                         task={() => runAction("connect", server.id)}
                       >
                         <Radio size={14} />
@@ -374,6 +389,27 @@ export function Settings({ state, runAction }: Props) {
   return (
     <div className="two-columns settings-layout">
       <section className="panel content-panel">
+        <div className="account-settings">
+          <div>
+            <h2>Аккаунт Steam</h2>
+            <p>
+              {state.account ? state.account.steamId : "Вход ещё не выполнен"}
+            </p>
+          </div>
+          {state.account ? (
+            <Action className="secondary" task={() => runAction("logout")}>
+              Выйти из аккаунта
+            </Action>
+          ) : (
+            <Action
+              className="secondary"
+              disabled={["steam", "registering"].includes(state.pairStatus)}
+              task={() => runAction("pair")}
+            >
+              Войти через Steam
+            </Action>
+          )}
+        </div>
         <h2>Интерфейс и запуск</h2>
         <Field label="Язык интерфейса">
           <PrettySelect
@@ -587,7 +623,8 @@ export function Devices({ state, runAction }: Props) {
                     )}
                     {device.payload.items?.map((item, index) => (
                       <div className="list-row" key={index}>
-                        <span>
+                        <span className="inline">
+                          <ItemIcon item={item.itemId} />
                           {(itemNames as Record<string, { name: string }>)[
                             item.itemId
                           ]?.name || `#${item.itemId}`}

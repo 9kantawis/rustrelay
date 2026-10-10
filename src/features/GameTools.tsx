@@ -12,6 +12,7 @@ import {
 import engine from "../../shared/rust-calculations.cjs";
 import type { AppState } from "../../shared/contracts";
 import PrettySelect from "../components/PrettySelect";
+import ItemIcon from "../components/ItemIcon";
 
 type Props = {
   page: string;
@@ -27,7 +28,10 @@ function ResourceList({ resources }: { resources: Record<string, number> }) {
     <div>
       {Object.entries(resources).map(([name, value]) => (
         <div className="list-row" key={name}>
-          <span>{names[name] || name}</span>
+          <span className="inline">
+            <ItemIcon item={name} />
+            {names[name] || name}
+          </span>
           <strong>{formatNumber(value)}</strong>
         </div>
       ))}
@@ -153,8 +157,14 @@ function Raid() {
                 }
               />
               <span>
-                {item.name}
-                <small>{formatNumber(item.sulfur)} серы</small>
+                <span className="inline">
+                  <ItemIcon item={item.id} />
+                  {item.name}
+                </span>
+                <small className="inline">
+                  <ItemIcon item="sulfur" size={16} />
+                  {formatNumber(item.sulfur)} серы
+                </small>
               </span>
             </label>
           ))}
@@ -180,14 +190,20 @@ function Raid() {
           <>
             <div className="result-number">
               {formatNumber(calculation.sulfur)}
-              <small>серы</small>
+              <small className="inline">
+                <ItemIcon item="sulfur" size={24} />
+                серы
+              </small>
             </div>
-            <p className="small">Топливо: {formatNumber(calculation.fuel)}</p>
+            <p className="small inline">
+              <ItemIcon item="lowgradefuel" size={22} />
+              Топливо: {formatNumber(calculation.fuel)}
+            </p>
             <div className="result-tools">
               {Object.entries(calculation.resources).map(([id, count]) => (
                 <div className="list-row" key={id}>
                   <span className="inline">
-                    <Swords size={16} />
+                    <ItemIcon item={id} />
                     {engine.explosives.find((item) => item.id === id)?.name}
                   </span>
                   <strong>× {count}</strong>
@@ -253,6 +269,7 @@ function Craft() {
                     options={engine.recipes.map((recipe) => ({
                       value: recipe.id,
                       label: recipe.name,
+                      icon: recipe.id,
                     }))}
                     onChange={setItem}
                   />
@@ -300,6 +317,7 @@ function Craft() {
                   options={engine.recyclables.map((row) => ({
                     value: row.id,
                     label: row.name,
+                    icon: row.id,
                   }))}
                   onChange={setComponent}
                 />
@@ -318,7 +336,8 @@ function Craft() {
               </div>
               {Object.entries(cart).map(([id, count]) => (
                 <div className="list-row" key={id}>
-                  <span>
+                  <span className="inline">
+                    <ItemIcon item={id} />
                     {engine.recyclables.find((row) => row.id === id)?.name}
                   </span>
                   <input
@@ -433,13 +452,34 @@ function Genetics() {
               onChange={(event) => setTarget(event.target.value.toUpperCase())}
             />
           </Field>
-          <Field label="Гены центрального растения">
+          <Field label="Растение, которое скрещиваем">
             <input
               maxLength={6}
               value={center}
               onChange={(event) => setCenter(event.target.value.toUpperCase())}
             />
           </Field>
+        </div>
+        <p className="gene-help">
+          Введи шесть букв у растения в центре грядки. Оно получит гены соседних
+          клонов.
+        </p>
+        <div className="gene-key">
+          <span>
+            <b>G</b> Рост
+          </span>
+          <span>
+            <b>Y</b> Урожай
+          </span>
+          <span>
+            <b>H</b> Выносливость
+          </span>
+          <span>
+            <b>W</b> Больше воды
+          </span>
+          <span>
+            <b>X</b> Пустой ген
+          </span>
         </div>
         {error && (
           <p className="notice" role="alert">
@@ -535,6 +575,7 @@ function Decay({ state, runAction }: Omit<Props, "page">) {
               options={Object.entries(materials).map(([id, item]) => ({
                 value: id,
                 label: item.name,
+                icon: id,
               }))}
               onChange={(value) => {
                 setGrade(value);

@@ -11,7 +11,10 @@ function worldPoint(x, y, map, worldSize) {
 }
 function worldPosition(x, y, map, worldSize) {
   const point = worldPoint(x, y, map, worldSize);
-  return { left: `${Number((point.x * 100).toFixed(8))}%`, top: `${Number((point.y * 100).toFixed(8))}%` };
+  return {
+    left: `${Number((point.x * 100).toFixed(8))}%`,
+    top: `${Number((point.y * 100).toFixed(8))}%`,
+  };
 }
 function gridLetter(column) {
   let label = "";
@@ -34,7 +37,7 @@ function gridLabel(x, y, worldSize) {
   );
 }
 function clampView(view, viewport, image) {
-  const scale = Math.min(8, Math.max(1, view.scale));
+  const scale = Math.min(image.maxScale || 8, Math.max(1, view.scale));
   const limitX = Math.max(0, (image.width * scale - viewport.width) / 2);
   const limitY = Math.max(0, (image.height * scale - viewport.height) / 2);
   return {
@@ -44,7 +47,7 @@ function clampView(view, viewport, image) {
   };
 }
 function zoomView(view, nextScale, point, viewport, image) {
-  const scale = Math.min(8, Math.max(1, nextScale));
+  const scale = Math.min(image.maxScale || 8, Math.max(1, nextScale));
   const ratio = scale / view.scale;
   return clampView(
     {

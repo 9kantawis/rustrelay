@@ -4,8 +4,10 @@ A free Rust+ companion for Windows.
 
 ## Features
 
-- Server map with a grid, markers and a spawn heatmap.
-- Team chat.
+- Server map with a grid, elevation, a spawn heatmap and saved places.
+- Route recording and history.
+- Team chat and Steam profiles.
+- Monument guides with images and loot tables.
 - Smart devices and base alerts.
 - Raid, crafting and recycling calculators.
 - Decay timers.

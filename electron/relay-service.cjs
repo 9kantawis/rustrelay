@@ -11,6 +11,8 @@ function createService({
   heatmaps = async () => ({ status: "unavailable", heatmap: null }),
 }) {
   let pollTimer;
+  const { createRouteRecorder } = require("./map-routes.cjs");
+  const recorder = createRouteRecorder(data);
   let companion;
   let refreshingSession = null;
   const live = {
@@ -20,8 +22,9 @@ function createService({
     heatmap: null,
     heatmapStatus: "idle",
     team: [],
+    mapNotes: [],
     chat: [],
-    pairStatus: "idle",
+    pairStatus: data.fcm?.auth?.SteamId ? "signed-in" : "idle",
     pairError: null,
     signIn: null,
   };
@@ -64,11 +67,13 @@ function createService({
       heatmap: null,
       heatmapStatus: "idle",
       team: [],
+      mapNotes: [],
       teamLeader: null,
       chat: [],
     });
   }
   function disconnect() {
+    if (recorder.finish()) store.save(data);
     clearInterval(pollTimer);
     clearLive();
     client.disconnect();
@@ -95,11 +100,21 @@ function createService({
         );
     }
     live.team = members;
+    const server = data.servers.find(
+      (item) => item.id === client.state.serverId,
+    );
+    if (server && live.info && recorder.record(server, live.info, members))
+      store.save(data);
   }
   function handleBroadcast(message) {
     try {
-      if (message.teamChanged?.teamInfo)
+      if (message.teamChanged?.teamInfo) {
         compareTeam(message.teamChanged.teamInfo.members || []);
+        live.mapNotes = [
+          ...(message.teamChanged.teamInfo.mapNotes || []),
+          ...(message.teamChanged.teamInfo.leaderMapNotes || []),
+        ];
+      }
       if (message.teamMessage?.message) {
         const incoming = message.teamMessage.message;
         if (
@@ -167,6 +182,10 @@ function createService({
       live.time = time.time;
       const team = await request({ getTeamInfo: {} });
       live.teamLeader = team.teamInfo?.leaderSteamId;
+      live.mapNotes = [
+        ...(team.teamInfo?.mapNotes || []),
+        ...(team.teamInfo?.leaderMapNotes || []),
+      ];
       compareTeam(team.teamInfo?.members || []);
       if (initial || !live.map) {
         const response = await request({ getMap: {} });
@@ -254,9 +273,20 @@ function createService({
       });
     }
   }
+  function signOutAccount() {
+    disconnect();
+    data.tracking = false;
+    data.fcm = null;
+    data.accountSignedOut = true;
+    live.pairStatus = "idle";
+    live.pairError = null;
+    save();
+  }
   const actions = {
     state: snapshot,
     async connect(id) {
+      if (data.accountSignedOut)
+        throw Error("Войди в Steam, чтобы подключить сохранённый сервер");
       const server = data.servers.find((item) => item.id === id);
       if (!server) throw Error("Сервер не найден");
       disconnect();
@@ -265,7 +295,7 @@ function createService({
       const session = client.session;
       await refresh(true);
       if (session !== client.session) return snapshot();
-      pollTimer = setInterval(() => refresh(), 20000);
+      pollTimer = setInterval(() => refresh(), data.tracking ? 5000 : 20000);
       return snapshot();
     },
     disconnect,
@@ -417,9 +447,24 @@ function createService({
         id: crypto.randomUUID(),
         serverId: client.state.serverId,
         name: String(input.name || "Метка").slice(0, 60),
+        kind: ["base", "favorite", "pin"].includes(input.kind)
+          ? input.kind
+          : "pin",
         x: input.x,
         y: input.y,
       });
+      save();
+    },
+    tracking(enabled) {
+      data.tracking = Boolean(enabled);
+      if (!data.tracking) recorder.finish();
+      clearInterval(pollTimer);
+      if (client.state.status === "connected")
+        pollTimer = setInterval(() => refresh(), data.tracking ? 5000 : 20000);
+      save();
+    },
+    deleteRoute(id) {
+      recorder.remove(id);
       save();
     },
     deletePin(id) {
@@ -463,6 +508,7 @@ function createService({
       value.start();
     },
     snapshot,
+    signOutAccount,
     data,
     live,
     save,

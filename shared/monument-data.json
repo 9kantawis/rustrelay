@@ -1,0 +1,3256 @@
+[
+  {
+    "puzzles": [],
+    "id": "abandoned-cabins",
+    "key": "swamp_c",
+    "name": "Abandoned Cabins",
+    "source": "https://rust-data.com/en/monuments/abandoned-cabins",
+    "image": "abandoned-cabins.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Medical Crate 33.3 % or Normal Crate 33.3 % or Food Crate 33.3 %",
+        "quantity": "×2",
+        "respawn": "28.3-30 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "15-20.8 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "13.3-20 min",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Metal Shop Front 1 Card Table 1 Sofa 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "abandoned-military-base",
+    "key": "desert_military_base_b",
+    "name": "Abandoned Military Base",
+    "source": "https://rust-data.com/en/monuments/abandoned-military-base",
+    "image": "abandoned-military-base.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "abandoned-supermarket",
+    "key": "supermarket_1",
+    "name": "Abandoned Supermarket",
+    "source": "https://rust-data.com/en/monuments/abandoned-supermarket",
+    "image": "abandoned-supermarket.webp",
+    "barrels": 3,
+    "crates": 13,
+    "requirements": [],
+    "cards": [
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Food Box",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/foodbox.png"
+      },
+      {
+        "items": "Basic Crate 50 % or Normal Crate 45 % or Military Crate 5 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_basic.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Vehicle Parts",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/vehicle_parts.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Hobo Barrel 1 Telephone 1 Light switch 2 Zipline landing point 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 4,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Blue Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "airfield",
+    "key": "airfield_1",
+    "name": "Airfield",
+    "source": "https://rust-data.com/en/monuments/airfield",
+    "image": "airfield.webp",
+    "barrels": 11,
+    "crates": 32,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green",
+      "keycard_blue"
+    ],
+    "cards": [
+      "green",
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 60 % or Military Crate 40 %",
+        "quantity": "×18",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 60 % or Military Crate 40 %",
+        "quantity": "×8",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×6",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×5",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Mine Crate",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_mine.png"
+      },
+      {
+        "items": "2 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Red Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_red.png"
+      },
+      {
+        "items": "Ore stone 45.5 % or Ore metal 27.3 % or Ore sulfur 27.3 %",
+        "quantity": "×5",
+        "respawn": "1,000 2 600 300",
+        "icon": "/images/resources/png/1024/stone-ore.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×3",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 0,
+      "readers": 4
+    },
+    "facilities": "Machine Count Research Table 1 Repair Bench 1 Small Oil Refinery 1 Elevator 1 Telephone 1 Light switch 16 Heat source 5 Zipline landing point 4 Sofa 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "apartment-complex",
+    "key": "apartments_complex_1",
+    "name": "Apartment Complex",
+    "source": "https://rust-data.com/en/monuments/apartment-complex",
+    "image": "apartment-complex.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Road Sign 1",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign1.png"
+      },
+      {
+        "items": "Road Sign 3",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign3.png"
+      },
+      {
+        "items": "Road Sign 5",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign5.png"
+      },
+      {
+        "items": "Road Sign 8",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign8.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Research Table 1 Repair Bench 1 Barbeque 1 Elevator 4 Apartment terminal 1 Mailbox 62 Telephone 2 Rentable shop 14 Always-lit Hobo Barrel 2 Zipline landing point 6 Chair 2 Seat 3 Sofa 4 Services Vendors Name Count Concierge 1 Security Name Count Security Guard 1 Apartments for sale Size Purchase price Minimum rent per day Storage slots Basement 25 10 134 Standard 150 50 282 Penthouse 350 100 391 Rent currency Scrap Inside each apartment Furniture BasementStandardPenthouse Bed 111 Kitchen Cabinet 233 Locker 111 Rent terminal 111 Seat 125 Stove 112 Telephone 111 Water source 111 Wood Storage Box 1-- Workbench Level 1 111 Bathroom Vanity -11 Fridge -11 Furnace -1- Large Wood Box -12 Medicine Cabinet -11 Boom Box --1 Chippy Arcade Game --1 Kitchen Sink --1 Sofa - Pattern --1 Wood Frame Large --1 Shops for rent Currency Scrap Initial fee 100 Rent 10 per hour Down payment to open 220 Prepaid rent 12 h Takeover protection 6 h Popularity multiplier +1 per takeover Items kept 24 h Capacity 30 slots Refused items Sulfur Shops per player 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Blue Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 0,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "arctic-research-base",
+    "key": "arctic_research_base_a",
+    "name": "Arctic Research Base",
+    "source": "https://rust-data.com/en/monuments/arctic-research-base",
+    "image": "arctic-research-base.webp",
+    "barrels": 24,
+    "crates": 23,
+    "requirements": [
+      "keycard_blue"
+    ],
+    "cards": [
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×14",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×6",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Oil Barrel 88.2 % or Yellow Barrel 5.9 % or Blue Barrel 5.9 %",
+        "quantity": "×5",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Tech Parts Crate 2 50 % or Ammo Crate 50 %",
+        "quantity": "×5",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/tech_parts_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×5",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Food Crate 1",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_food_1.png"
+      },
+      {
+        "items": "Fuel Crate",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_fuel.png"
+      },
+      {
+        "items": "Normal Crate 50 % or Military Crate 50 %",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "2 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Red Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_red.png"
+      },
+      {
+        "items": "Snowmobile",
+        "quantity": "×100",
+        "respawn": "On puzzle reset",
+        "icon": "/images/vehicles/png/1024/snowmobile.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 2
+    },
+    "facilities": "Machine Count Light switch 11 Heat source 26 Zipline landing point 2 Chair 1 Sofa 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "bandit-camp",
+    "key": "bandit_town",
+    "name": "Bandit Camp",
+    "source": "https://rust-data.com/en/monuments/bandit-camp",
+    "image": "bandit-camp.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "ferry-terminal",
+    "key": "ferry_terminal_1",
+    "name": "Ferry Terminal",
+    "source": "https://rust-data.com/en/monuments/ferry-terminal",
+    "image": "ferry-terminal.webp",
+    "barrels": 32,
+    "crates": 24,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×26",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Normal Crate 66.7 % or Military Crate 33.3 %",
+        "quantity": "×10",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 85 % or Military Crate 15 %",
+        "quantity": "×9",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×6",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "13.3-25 min",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Research Table 1 Repair Bench 1 Hobo Barrel 1 Modular Car Lift 1 Elevator 1 Telephone 1 Always-lit Hobo Barrel 1 Heat source 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "fishing-village",
+    "key": "fishing_village_c",
+    "name": "Fishing Village",
+    "source": "https://rust-data.com/en/monuments/fishing-village",
+    "image": "fishing-village.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Always-lit Hobo Barrel 1 Zipline landing point 1 Sofa 3 Services Missions Mission providers Name Count Fisherman 1 Dive Master 1 Missions offered Name Count Shark Hunt 1 Underwater Bounty 1 An Important Broadcast 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "fishing-village-2",
+    "key": "fishing_village_b",
+    "name": "Fishing Village",
+    "source": "https://rust-data.com/en/monuments/fishing-village-2",
+    "image": "fishing-village-2.webp",
+    "barrels": 4,
+    "crates": 3,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Medical Crate 90 % or Food Crate 10 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Zipline landing point 1 Chair 1 Services Missions Mission providers Name Count Fisherman 1 Dive Master 1 Missions offered Name Count Shark Hunt 1 Underwater Bounty 1 An Important Broadcast 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "giant-excavator-pit",
+    "key": "excavator_1",
+    "name": "Giant Excavator Pit",
+    "source": "https://rust-data.com/en/monuments/giant-excavator-pit",
+    "image": "giant-excavator-pit.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Basic Crate 50 % or Normal Crate 35 % or Military Crate 15 %",
+        "quantity": "×10",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_basic.png"
+      },
+      {
+        "items": "Food Box",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/foodbox.png"
+      },
+      {
+        "items": "Mine Crate 60 % or Basic Crate 40 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_mine.png"
+      },
+      {
+        "items": "Palm tree tall a entity",
+        "quantity": "×6",
+        "respawn": "900",
+        "icon": "/images/resources/png/1024/palm_tree_tall_a_entity.png"
+      },
+      {
+        "items": "Palm tree med a entity",
+        "quantity": "×5",
+        "respawn": "750",
+        "icon": "/images/resources/png/1024/palm_tree_med_a_entity.png"
+      },
+      {
+        "items": "Palm tree short a entity",
+        "quantity": "×5",
+        "respawn": "550",
+        "icon": "/images/resources/png/1024/palm_tree_short_a_entity.png"
+      },
+      {
+        "items": "Palm tree tall b entity",
+        "quantity": "×4",
+        "respawn": "900",
+        "icon": "/images/resources/png/1024/palm_tree_tall_b_entity.png"
+      },
+      {
+        "items": "Palm tree small b entity",
+        "quantity": "×3",
+        "respawn": "600",
+        "icon": "/images/resources/png/1024/palm_tree_small_b_entity.png"
+      },
+      {
+        "items": "Palm tree small c entity",
+        "quantity": "×2",
+        "respawn": "600",
+        "icon": "/images/resources/png/1024/palm_tree_small_c_entity.png"
+      },
+      {
+        "items": "Palm tree short b entity",
+        "quantity": "×1",
+        "respawn": "550",
+        "icon": "/images/resources/png/1024/palm_tree_short_b_entity.png"
+      },
+      {
+        "items": "Palm tree short c entity",
+        "quantity": "×1",
+        "respawn": "550",
+        "icon": "/images/resources/png/1024/palm_tree_short_c_entity.png"
+      },
+      {
+        "items": "Palm tree small a entity",
+        "quantity": "×1",
+        "respawn": "600",
+        "icon": "/images/resources/png/1024/palm_tree_small_a_entity.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Elevator 1 Zipline landing point 3 Sofa 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "harbor",
+    "key": "harbor_1",
+    "name": "Harbor",
+    "source": "https://rust-data.com/en/monuments/harbor",
+    "image": "harbor.webp",
+    "barrels": 40,
+    "crates": 24,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×30",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×10",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×10",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate 90 % or Military Crate 10 %",
+        "quantity": "×8",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Small Oil Refinery 1 Elevator 1 Telephone 1 Light switch 6 Zipline landing point 5 Sofa 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "harbor-2",
+    "key": "harbor_2",
+    "name": "Harbor",
+    "source": "https://rust-data.com/en/monuments/harbor-2",
+    "image": "harbor-2.webp",
+    "barrels": 45,
+    "crates": 26,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×35",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×11",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×10",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Normal Crate 90 % or Military Crate 10 %",
+        "quantity": "×9",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Small Oil Refinery 1 Elevator 1 Telephone 1 Light switch 4 Always-lit Hobo Barrel 1 Zipline landing point 3 Chair 2 Sofa 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "hqm-quarry",
+    "key": "mining_quarry_c",
+    "name": "HQM Quarry",
+    "source": "https://rust-data.com/en/monuments/hqm-quarry",
+    "image": "hqm-quarry.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "jungle-ruin",
+    "key": "jungle_ruins_b",
+    "name": "Jungle ruin",
+    "source": "https://rust-data.com/en/monuments/jungle-ruin",
+    "image": "jungle-ruin.webp",
+    "barrels": 3,
+    "crates": 3,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Normal Crate 90 % or Military Crate 10 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "jungle-ziggurat",
+    "key": "jungle_ziggurat_a",
+    "name": "Jungle Ziggurat",
+    "source": "https://rust-data.com/en/monuments/jungle-ziggurat",
+    "image": "jungle-ziggurat.webp",
+    "barrels": 6,
+    "crates": 8,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Normal Crate",
+        "quantity": "×6",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×6",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Basic Crate (jungle)",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_basic_jungle.png"
+      },
+      {
+        "items": "Trumpet tree b",
+        "quantity": "×1",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/trumpet_tree_b.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "junkyard",
+    "key": "junkyard_1",
+    "name": "Junkyard",
+    "source": "https://rust-data.com/en/monuments/junkyard",
+    "image": "junkyard.webp",
+    "barrels": 10,
+    "crates": 23,
+    "requirements": [],
+    "cards": [
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×3",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 45 % or Blue Barrel 45 % or Diesel Fuel 10 %",
+        "quantity": "×10",
+        "respawn": "- - 1",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×10",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 50 % or Military Crate 50 %",
+        "quantity": "×10",
+        "respawn": "- -",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Road Sign 9",
+        "quantity": "×2",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/roadsign9.png"
+      },
+      {
+        "items": "Road Sign 8",
+        "quantity": "×1",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/roadsign8.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      },
+      {
+        "items": "Magnet Crane",
+        "quantity": "×1",
+        "respawn": "5-10 min",
+        "icon": "/images/vehicles/png/1024/magnetcrane.entity.png"
+      },
+      {
+        "items": "Pine d",
+        "quantity": "×84",
+        "respawn": "500",
+        "icon": "/images/resources/png/1024/pine_d.png"
+      },
+      {
+        "items": "Pine c",
+        "quantity": "×21",
+        "respawn": "750",
+        "icon": "/images/resources/png/1024/pine_c.png"
+      },
+      {
+        "items": "Douglas fir d",
+        "quantity": "×7",
+        "respawn": "500",
+        "icon": "/images/resources/png/1024/douglas_fir_d.png"
+      },
+      {
+        "items": "American beech c",
+        "quantity": "×3",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/american_beech_c.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Shredder 1 Modular Car Lift 1 Always-lit Hobo Barrel 2 Chair 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "large-barn",
+    "key": "stables_b",
+    "name": "Large Barn",
+    "source": "https://rust-data.com/en/monuments/large-barn",
+    "image": "large-barn.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "American beech e",
+        "quantity": "×3",
+        "respawn": "500",
+        "icon": "/images/resources/png/1024/american_beech_e.png"
+      },
+      {
+        "items": "American beech c",
+        "quantity": "×1",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/american_beech_c.png"
+      },
+      {
+        "items": "Oak c",
+        "quantity": "×1",
+        "respawn": "750",
+        "icon": "/images/resources/png/1024/oak_c.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Telephone 1 Always-lit Hobo Barrel 1 Zipline landing point 3 Services Shops Stables Shopkeeper For sale Price Restock Single Horse Saddle 75 Scrap 10 s Double Horse Saddle 90 Scrap 10 s Roadsign Horse Armor 100 Scrap 10 s High Quality Horse Shoes 40 Scrap 10 s 50 Scrap 12 Rose 15 min 3 Scrap 1 Sunflower 5 min 8 Scrap 1 Orchid 10 min Vendors Name Count Stable Master 1 Missions Mission providers Name Count Stablehand 1 Hunter 1 Missions offered Name Count Boar Hunt 1 Deer Hunt 1 Treasure Hunter 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "large-fishing-village",
+    "key": "fishing_village_a",
+    "name": "Large Fishing Village",
+    "source": "https://rust-data.com/en/monuments/large-fishing-village",
+    "image": "large-fishing-village.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Road Sign 8",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign8.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Always-lit Hobo Barrel 1 Zipline landing point 2 Services Missions Mission providers Name Count Fisherman 1 Dive Master 1 Missions offered Name Count Shark Hunt 1 Underwater Bounty 1 An Important Broadcast 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Blue Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": ""
+      }
+    ],
+    "id": "large-oil-rig",
+    "key": "oilrig_1",
+    "name": "Large Oil Rig",
+    "source": "https://rust-data.com/en/monuments/large-oil-rig",
+    "image": "large-oil-rig.webp",
+    "barrels": 33,
+    "crates": 27,
+    "requirements": [
+      "keycard_red",
+      "keycard_green",
+      "fuse",
+      "fuse.highgrade",
+      "keycard_blue"
+    ],
+    "cards": [
+      "red",
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×18",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Oil Barrel",
+        "quantity": "×15",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×8",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×7",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "Locked Crate (Oil Rig)",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/codelockedhackablecrate_oilrig.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×4",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 1
+    },
+    "facilities": "Machine Count Workbench Level 2 1 Research Table 1 Barbeque 1 Computer Station 1 Heat source 2 Chair 3 Boom Box 1 Cameras Code OILRIG2L1 Copy code OILRIG2L6B Copy code OILRIG2L3A Copy code OILRIG2L5 Copy code OILRIG2L4 Copy code OILRIG2L6D Copy code OILRIG2L2 Copy code OILRIG2L6A Copy code OILRIG2DOCK Copy code OILRIG2EXHAUST Copy code OILRIG2L6C Copy code OILRIG2HELI Copy code OILRIG2L3B Copy code ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 4,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Green Keycard, Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 5,
+        "doorTime": "10 s",
+        "reset": ""
+      }
+    ],
+    "id": "launch-site",
+    "key": "launch_site_1",
+    "name": "Launch Site",
+    "source": "https://rust-data.com/en/monuments/launch-site",
+    "image": "launch-site.webp",
+    "barrels": 64,
+    "crates": 85,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_red",
+      "keycard_green"
+    ],
+    "cards": [
+      "red",
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 50 % or Military Crate 50 %",
+        "quantity": "×8",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×56",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×30",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×20",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×15",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Oil Barrel 88.2 % or Yellow Barrel 5.9 % or Blue Barrel 5.9 %",
+        "quantity": "×8",
+        "respawn": "10-15 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×5",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×3",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "2 Advanced Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/advancedblueprintfragment.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 4
+    },
+    "facilities": "Machine Count Research Table 1 Repair Bench 1 Small Oil Refinery 1 Elevator 1 Lift 4 Telephone 1 Light switch 10 Always-lit Hobo Barrel 8 Zipline landing point 4 Chair 46 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "lighthouse",
+    "key": "lighthouse",
+    "name": "Lighthouse",
+    "source": "https://rust-data.com/en/monuments/lighthouse",
+    "image": "lighthouse.webp",
+    "barrels": 10,
+    "crates": 5,
+    "requirements": [],
+    "cards": [
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Oil Barrel 41.7 % or Yellow Barrel 29.2 % or Blue Barrel 29.2 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Yellow Barrel 41.7 % or Blue Barrel 41.7 % or Food Crate 12.5 % or Medical Crate 4.2 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Light switch 2 Zipline landing point 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard, Blue Keycard, Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 2,
+        "switches": 3,
+        "readers": 6,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "military-tunnel",
+    "key": "military_tunnel_1",
+    "name": "Military Tunnel",
+    "source": "https://rust-data.com/en/monuments/military-tunnel",
+    "image": "military-tunnel.webp",
+    "barrels": 14,
+    "crates": 22,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green",
+      "keycard_blue",
+      "keycard_red"
+    ],
+    "cards": [
+      "green",
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 50 % or Military Crate 50 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×14",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×6",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×6",
+        "respawn": "30-46.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Road Sign 1",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign1.png"
+      },
+      {
+        "items": "Road Sign 2",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign2.png"
+      },
+      {
+        "items": "2 Advanced Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/advancedblueprintfragment.png"
+      },
+      {
+        "items": "Ore stone 45.5 % or Ore metal 27.3 % or Ore sulfur 27.3 %",
+        "quantity": "×7",
+        "respawn": "1,000 2 600 300",
+        "icon": "/images/resources/png/1024/stone-ore.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×3",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 2,
+      "switches": 3,
+      "readers": 6
+    },
+    "facilities": "Machine Count Elevator 1 Always-lit Hobo Barrel 2 Chair 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "mining-outpost",
+    "key": "warehouse",
+    "name": "Mining Outpost",
+    "source": "https://rust-data.com/en/monuments/mining-outpost",
+    "image": "mining-outpost.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Basic Crate",
+        "quantity": "×4",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_basic.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×4",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×4",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Vehicle Parts",
+        "quantity": "×2",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/vehicle_parts.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Repair Bench 1 Light switch 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": ""
+      }
+    ],
+    "id": "missile-silo",
+    "key": "nuclear_missile_silo",
+    "name": "Missile Silo",
+    "source": "https://rust-data.com/en/monuments/missile-silo",
+    "image": "missile-silo.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [
+      "keycard_red"
+    ],
+    "cards": [
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 50 % or Military Crate 50 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 70 % or Normal Crate 30 %",
+        "quantity": "×12",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×10",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 80 % or Normal Crate 20 %",
+        "quantity": "×9",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "2 Advanced Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/advancedblueprintfragment.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×3",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 1
+    },
+    "facilities": "Machine Count Elevator 3 Computer Station 1 Telephone 1 Heat source 1 Chair 10 Sofa 1 Cameras Code SILOTOWER Copy code SILOSHIPPING Copy code SILOMISSILE Copy code SILOEXIT2 Copy code SILOEXIT1 Copy code ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Blue Keycard, Red Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_red",
+              "name": "Red Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 0,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": ""
+      }
+    ],
+    "id": "oil-rig",
+    "key": "oilrig_2",
+    "name": "Oil Rig",
+    "source": "https://rust-data.com/en/monuments/oil-rig",
+    "image": "oil-rig.webp",
+    "barrels": 15,
+    "crates": 17,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_blue",
+      "keycard_red",
+      "keycard_green"
+    ],
+    "cards": [
+      "blue",
+      "red",
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Oil Barrel 75 % or Diesel Fuel 25 %",
+        "quantity": "×8",
+        "respawn": "- 1",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×7",
+        "respawn": "- -",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×4",
+        "respawn": "- -",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Normal Crate 60 % or Military Crate 40 %",
+        "quantity": "×4",
+        "respawn": "- -",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×3",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×2",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×2",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×1",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "Locked Crate (Oil Rig)",
+        "quantity": "×1",
+        "respawn": "-",
+        "icon": "/images/loot/png/1024/codelockedhackablecrate_oilrig.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "–",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 0,
+      "readers": 2
+    },
+    "facilities": "Machine Count Computer Station 1 Heat source 2 Boom Box 1 Cameras Code OILRIG1L3 Copy code OILRIG1HELI Copy code OILRIG1DOCK Copy code OILRIG1L4 Copy code OILRIG1L2 Copy code OILRIG1L1 Copy code ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "outpost",
+    "key": "compound",
+    "name": "Outpost",
+    "source": "https://rust-data.com/en/monuments/outpost",
+    "image": "outpost.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Road Sign 8",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign8.png"
+      },
+      {
+        "items": "Road Sign 4",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign4.png"
+      },
+      {
+        "items": "Road Sign 1",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign1.png"
+      },
+      {
+        "items": "Road Sign 2",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign2.png"
+      },
+      {
+        "items": "Road Sign 3",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign3.png"
+      },
+      {
+        "items": "Road Sign 5",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign5.png"
+      },
+      {
+        "items": "Road Sign 7",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign7.png"
+      },
+      {
+        "items": "American beech c",
+        "quantity": "×2",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/american_beech_c.png"
+      },
+      {
+        "items": "Oak c",
+        "quantity": "×2",
+        "respawn": "750",
+        "icon": "/images/resources/png/1024/oak_c.png"
+      },
+      {
+        "items": "American beech e",
+        "quantity": "×1",
+        "respawn": "500",
+        "icon": "/images/resources/png/1024/american_beech_e.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Workbench Level 1 2 Research Table 1 Repair Bench 1 Barbeque 1 Small Oil Refinery 1 Small Water Catcher 1 Elevator 1 Telephone 1 Clan Table 1 Marketplace 1 Slot machine 2 Card Table 1 Always-lit Hobo Barrel 2 Heat source 2 Zipline landing point 6 Chair 11 Junkyard Drum Kit 1 Wheelbarrow Piano 1 Xylobone 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "oxums-gas-station",
+    "key": "gas_station_1",
+    "name": "Oxum's Gas Station",
+    "source": "https://rust-data.com/en/monuments/oxums-gas-station",
+    "image": "oxums-gas-station.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [
+      "green"
+    ],
+    "loot": [
+      {
+        "items": "Food Box",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/foodbox.png"
+      },
+      {
+        "items": "Basic Crate 50 % or Normal Crate 35 % or Military Crate 15 %",
+        "quantity": "×5",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_basic.png"
+      },
+      {
+        "items": "Vehicle Parts",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/vehicle_parts.png"
+      },
+      {
+        "items": "Mine Crate",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_mine.png"
+      },
+      {
+        "items": "Mine Crate 60 % or Basic Crate 40 %",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_mine.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Hobo Barrel 1 Car lift 1 Telephone 1 Light switch 2 Zipline landing point 2 Chair 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle (1)",
+        "supplies": [
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 1,
+        "readers": 4,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Green Keycard puzzle (2)",
+        "supplies": [
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 0,
+        "switches": 1,
+        "readers": 3,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Blue Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "power-plant",
+    "key": "powerplant_1",
+    "name": "Power Plant",
+    "source": "https://rust-data.com/en/monuments/power-plant",
+    "image": "power-plant.webp",
+    "barrels": 15,
+    "crates": 31,
+    "requirements": [
+      "keycard_green",
+      "fuse",
+      "fuse.highgrade",
+      "keycard_blue"
+    ],
+    "cards": [
+      "green",
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Military Crate",
+        "quantity": "×3",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Elite Crate",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_elite.png"
+      },
+      {
+        "items": "Normal Crate 60 % or Military Crate 40 %",
+        "quantity": "×15",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×10",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Normal Crate 60 % or Military Crate 40 %",
+        "quantity": "×8",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×5",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Road Sign 3",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign3.png"
+      },
+      {
+        "items": "Road Sign 5",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign5.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "2 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Green Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_green.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 1,
+      "readers": 4
+    },
+    "facilities": "Machine Count Research Table 1 Repair Bench 2 Small Oil Refinery 2 Elevator 1 Telephone 1 Zipline landing point 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "radtown",
+    "key": "radtown_1",
+    "name": "Radtown",
+    "source": "https://rust-data.com/en/monuments/radtown",
+    "image": "radtown.webp",
+    "barrels": 15,
+    "crates": 50,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 90 % or Military Crate 10 %",
+        "quantity": "×3",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×15",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Food Box",
+        "quantity": "×12",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/foodbox.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×12",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×10",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Normal Crate 63.6 % or Military Crate 36.4 %",
+        "quantity": "×8",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Vehicle Parts",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/vehicle_parts.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Hobo Barrel 1 Heat source 3 Chair 11 Sofa 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "ranch",
+    "key": "stables_a",
+    "name": "Ranch",
+    "source": "https://rust-data.com/en/monuments/ranch",
+    "image": "ranch.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "American beech c",
+        "quantity": "×2",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/american_beech_c.png"
+      },
+      {
+        "items": "American beech e",
+        "quantity": "×2",
+        "respawn": "500",
+        "icon": "/images/resources/png/1024/american_beech_e.png"
+      },
+      {
+        "items": "Oak c",
+        "quantity": "×1",
+        "respawn": "750",
+        "icon": "/images/resources/png/1024/oak_c.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Telephone 1 Always-lit Hobo Barrel 1 Zipline landing point 3 Chair 1 Sofa 2 Services Shops Stables Shopkeeper For sale Price Restock Single Horse Saddle 75 Scrap 10 s Double Horse Saddle 90 Scrap 10 s Roadsign Horse Armor 100 Scrap 10 s High Quality Horse Shoes 40 Scrap 10 s 50 Scrap 12 Rose 15 min 3 Scrap 1 Sunflower 5 min 8 Scrap 1 Orchid 10 min Vendors Name Count Stable Master 1 Missions Mission providers Name Count Stablehand 1 Hunter 1 Missions offered Name Count Boar Hunt 1 Deer Hunt 1 Treasure Hunter 1 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "satellite-dish",
+    "key": "satellite_dish",
+    "name": "Satellite Dish",
+    "source": "https://rust-data.com/en/monuments/satellite-dish",
+    "image": "satellite-dish.webp",
+    "barrels": 18,
+    "crates": 23,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×10",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×7",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 66.7 % or Military Crate 33.3 %",
+        "quantity": "×7",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×7",
+        "respawn": "15-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×5",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      },
+      {
+        "items": "Oil Barrel 88.2 % or Yellow Barrel 5.9 % or Blue Barrel 5.9 %",
+        "quantity": "×3",
+        "respawn": "20-30 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Road Sign 2",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign2.png"
+      },
+      {
+        "items": "Road Sign 3",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign3.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      },
+      {
+        "items": "Pine dead a",
+        "quantity": "×3",
+        "respawn": "1,000",
+        "icon": "/images/resources/png/1024/pine_dead_a.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Research Table 1 Telephone 1 Zipline landing point 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "sewer-branch",
+    "key": "radtown_small_3",
+    "name": "Sewer Branch",
+    "source": "https://rust-data.com/en/monuments/sewer-branch",
+    "image": "sewer-branch.webp",
+    "barrels": 4,
+    "crates": 23,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×9",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×9",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×2",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Road Sign 1",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign1.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 2
+    },
+    "facilities": "Machine Count Small Oil Refinery 1 Telephone 1 Always-lit Hobo Barrel 1 Zipline landing point 4 Chair 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "stone-quarry",
+    "key": "mining_quarry_b",
+    "name": "Stone Quarry",
+    "source": "https://rust-data.com/en/monuments/stone-quarry",
+    "image": "stone-quarry.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "sulfur-quarry",
+    "key": "mining_quarry_a",
+    "name": "Sulfur Quarry",
+    "source": "https://rust-data.com/en/monuments/sulfur-quarry",
+    "image": "sulfur-quarry.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 1,
+        "readers": 1,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "the-dome",
+    "key": "sphere_tank",
+    "name": "The Dome",
+    "source": "https://rust-data.com/en/monuments/the-dome",
+    "image": "the-dome.webp",
+    "barrels": 20,
+    "crates": 15,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green"
+    ],
+    "cards": [
+      "green",
+      "blue"
+    ],
+    "loot": [
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×10",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×9",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Oil Barrel 83.3 % or Yellow Barrel 8.3 % or Blue Barrel 8.3 %",
+        "quantity": "×6",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Military Crate",
+        "quantity": "×4",
+        "respawn": "36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Oil Barrel 88.2 % or Yellow Barrel 5.9 % or Blue Barrel 5.9 %",
+        "quantity": "×4",
+        "respawn": "20-30 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Normal Crate",
+        "quantity": "×2",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Blue Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_blue.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×2",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 1,
+      "readers": 1
+    },
+    "facilities": "Machine Count Small Oil Refinery 2 Always-lit Hobo Barrel 1 Zipline landing point 4 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "train-tunnel",
+    "key": "entrance_bunker_c",
+    "name": "Train Tunnel",
+    "source": "https://rust-data.com/en/monuments/train-tunnel",
+    "barrels": 2,
+    "crates": 3,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Food Box",
+        "quantity": "×3",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/foodbox.png"
+      },
+      {
+        "items": "Yellow Barrel 50 % or Blue Barrel 50 %",
+        "quantity": "×2",
+        "respawn": "15-20 min",
+        "icon": "/images/loot/png/1024/loot-barrel-1.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Elevator 1 Computer Station 1 Chair 3 Sofa 1 Cameras Code OUTDOOR#ID Copy code ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard, Blue Keycard puzzle (1)",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 2,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      },
+      {
+        "title": "Green Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": ""
+      },
+      {
+        "title": "Green Keycard, Blue Keycard puzzle (2)",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 2,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": ""
+      }
+    ],
+    "id": "train-yard",
+    "key": "trainyard_1",
+    "name": "Train Yard",
+    "source": "https://rust-data.com/en/monuments/train-yard",
+    "image": "train-yard.webp",
+    "barrels": 15,
+    "crates": 34,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green",
+      "keycard_blue"
+    ],
+    "cards": [
+      "green",
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×15",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×11",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×10",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×4",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "2 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Red Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_red.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 2,
+      "readers": 2
+    },
+    "facilities": "Machine Count Repair Bench 1 Small Oil Refinery 1 Elevator 1 Telephone 1 Light switch 9 Zipline landing point 2 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "underground-cave",
+    "key": "cave_large_sewers_hard",
+    "name": "Underground Cave",
+    "source": "https://rust-data.com/en/monuments/underground-cave",
+    "image": "underground-cave.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Mine Crate",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_mine.png"
+      },
+      {
+        "items": "Minecart",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/minecart.png"
+      },
+      {
+        "items": "Ore stone 45.5 % or Ore metal 27.3 % or Ore sulfur 27.3 %",
+        "quantity": "×7",
+        "respawn": "1,000 2 600 300",
+        "icon": "/images/resources/png/1024/stone-ore.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "underwater-lab",
+    "key": "underwater_lab_b",
+    "name": "Underwater Lab",
+    "source": "https://rust-data.com/en/monuments/underwater-lab",
+    "image": "underwater-lab.webp",
+    "barrels": 2,
+    "crates": 2,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Oil Barrel",
+        "quantity": "×2",
+        "respawn": "20-30 min",
+        "icon": "/images/loot/png/1024/oil_barrel.png"
+      },
+      {
+        "items": "Fuel Crate",
+        "quantity": "×1",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_fuel.png"
+      },
+      {
+        "items": "Military Crate 50 % or Normal Crate 50 %",
+        "quantity": "×1",
+        "respawn": "15-30 min",
+        "icon": "/images/loot/png/1024/crate_normal.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [
+      {
+        "title": "Green Keycard, Blue Keycard puzzle",
+        "supplies": [
+          [
+            {
+              "id": "fuse",
+              "name": "Electric Fuse"
+            },
+            {
+              "id": "fuse.highgrade",
+              "name": "Heavy Fuse"
+            }
+          ],
+          [
+            {
+              "id": "keycard_green",
+              "name": "Green Keycard"
+            }
+          ],
+          [
+            {
+              "id": "keycard_blue",
+              "name": "Blue Keycard"
+            }
+          ]
+        ],
+        "fuses": 1,
+        "switches": 0,
+        "readers": 2,
+        "doorTime": "10 s",
+        "reset": "30 min"
+      }
+    ],
+    "id": "water-treatment-plant",
+    "key": "water_treatment_plant_1",
+    "name": "Water Treatment Plant",
+    "source": "https://rust-data.com/en/monuments/water-treatment-plant",
+    "image": "water-treatment-plant.webp",
+    "barrels": 13,
+    "crates": 34,
+    "requirements": [
+      "fuse",
+      "fuse.highgrade",
+      "keycard_green",
+      "keycard_blue"
+    ],
+    "cards": [
+      "green",
+      "blue",
+      "red"
+    ],
+    "loot": [
+      {
+        "items": "Normal Crate 65 % or Military Crate 35 %",
+        "quantity": "×4",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×15",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Blue Barrel 60 % or Yellow Barrel 40 %",
+        "quantity": "×13",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/loot-barrel-2.png"
+      },
+      {
+        "items": "Normal Crate 80 % or Military Crate 20 %",
+        "quantity": "×10",
+        "respawn": "On puzzle reset",
+        "icon": "/images/loot/png/1024/crate_normal_2.png"
+      },
+      {
+        "items": "Medical Crate 60 % or Food Crate 40 %",
+        "quantity": "×5",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/crate_normal_2_medical.png"
+      },
+      {
+        "items": "1 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "2 Basic Blueprint Fragment",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/basicblueprintfragment.png"
+      },
+      {
+        "items": "1 Red Keycard",
+        "quantity": "×1",
+        "respawn": "On puzzle reset",
+        "icon": "/images/Items/png/256/keycard_red.png"
+      },
+      {
+        "items": "Diesel Fuel",
+        "quantity": "×3",
+        "respawn": "1",
+        "icon": "/images/loot/png/1024/diesel_barrel_world.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 1,
+      "switches": 0,
+      "readers": 2
+    },
+    "facilities": "Machine Count Repair Bench 2 Small Oil Refinery 2 Elevator 1 Telephone 1 Zipline landing point 3 ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  },
+  {
+    "puzzles": [],
+    "id": "water-well",
+    "key": "water_well_a",
+    "name": "Water Well",
+    "source": "https://rust-data.com/en/monuments/water-well",
+    "image": "water-well.webp",
+    "barrels": null,
+    "crates": null,
+    "requirements": [],
+    "cards": [],
+    "loot": [
+      {
+        "items": "Road Sign 9",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/loot/png/1024/roadsign9.png"
+      },
+      {
+        "items": "Water Well Shopkeeper",
+        "quantity": "×1",
+        "respawn": "30-36.7 min",
+        "icon": "/images/npcs/portrait/png/256/waterwell_shopkeeper.png"
+      }
+    ],
+    "puzzle": {
+      "fuses": 0,
+      "switches": 0,
+      "readers": 0
+    },
+    "facilities": "Machine Count Hobo Barrel 1 Planter box 1 Water well 1 Services ",
+    "safeZone": false,
+    "checked": "2026-10-10"
+  }
+]

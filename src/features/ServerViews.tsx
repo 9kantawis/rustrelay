@@ -75,7 +75,17 @@ export function Team({ state, runAction, navigateTo }: Props) {
                 {member.name.slice(0, 2).toUpperCase()}
               </span>
               <div className="grow">
-                <strong>{member.name}</strong>
+                <button
+                  className="steam-profile-link"
+                  onClick={() =>
+                    void runAction("openSteamProfile", member.steamId).catch(
+                      () => {},
+                    )
+                  }
+                  title="Открыть профиль Steam"
+                >
+                  {member.name}
+                </button>
                 <p>
                   {member.isOnline ? "В сети" : "Не в сети"} ·{" "}
                   {member.isAlive ? "Жив" : "Погиб"}
@@ -103,7 +113,17 @@ export function Team({ state, runAction, navigateTo }: Props) {
             state.chat.map((row, index) => (
               <div className="chat-message" key={`${row.time}-${index}`}>
                 <div>
-                  <strong>{row.name}</strong>
+                  <button
+                    className="steam-profile-link"
+                    onClick={() =>
+                      void runAction("openSteamProfile", row.steamId).catch(
+                        () => {},
+                      )
+                    }
+                    title="Открыть профиль Steam"
+                  >
+                    {row.name}
+                  </button>
                   <small>
                     {new Date(row.time * 1000).toLocaleTimeString(
                       state.settings.language,

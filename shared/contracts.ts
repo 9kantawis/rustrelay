@@ -42,12 +42,24 @@ export interface Timer {
   ends: number;
   grade: string;
 }
+export interface MapRoute {
+  id: string;
+  serverId: string;
+  serverName: string;
+  playerId: string;
+  mapKey: string;
+  started: number;
+  ended: number | null;
+  distance: number;
+  points: Array<{ x: number; y: number; time: number }>;
+}
 export interface Pin {
   id: string;
   serverId: string | null;
   name: string;
   x: number;
   y: number;
+  kind?: "pin" | "base" | "favorite";
 }
 export interface RelaySettings {
   language: Language;
@@ -77,6 +89,10 @@ export interface AppState {
   events: RelayEvent[];
   timers: Timer[];
   pins: Pin[];
+  routes: MapRoute[];
+  tracking: boolean;
+  account: { steamId: string } | null;
+  requiresSignIn: boolean;
   settings: RelaySettings;
   info: {
     name: string;
@@ -85,11 +101,19 @@ export interface AppState {
     queuedPlayers: number;
     mapSize: number;
     wipeTime: number;
+    seed?: number;
+    map?: string;
   } | null;
   heatmap: {
     resolution: number;
     worldSize: number;
     categories: Record<string, string>;
+    elevation?: {
+      resolution: number;
+      values: string;
+      min: number;
+      max: number;
+    };
   } | null;
   heatmapStatus: "idle" | "loading" | "ready" | "unavailable" | "error";
   map: {
@@ -108,6 +132,7 @@ export interface AppState {
     x: number;
     y: number;
   }>;
+  mapNotes: Array<{ type: number; x: number; y: number }>;
   chat: Array<{ steamId: string; name: string; message: string; time: number }>;
   census: Array<{
     kind: string;
@@ -133,6 +158,10 @@ export const emptyState: AppState = {
   events: [],
   timers: [],
   pins: [],
+  routes: [],
+  tracking: false,
+  account: null,
+  requiresSignIn: false,
   census: [],
   settings: {
     language: "en",
@@ -158,6 +187,7 @@ export const emptyState: AppState = {
   time: null,
   team: [],
   chat: [],
+  mapNotes: [],
   pairStatus: "idle",
   pairError: null,
   hasPairing: false,

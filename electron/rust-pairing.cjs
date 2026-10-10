@@ -41,6 +41,7 @@ async function postJson(url, body) {
 function createPairing({ service, signIn, report = () => {} }) {
   let listener = null;
   let busy = false;
+  let generation = 0;
   function setPairingStatus(value) {
     service.live.pairStatus = value;
     if (value !== "error") service.live.pairError = null;
@@ -49,13 +50,15 @@ function createPairing({ service, signIn, report = () => {} }) {
   }
   async function listen() {
     if (!service.data.fcm?.credentials?.gcm)
-      throw Error("Сначала войди в Steam или импортируй файл Rust+");
+      throw Error("Сначала войди в Steam");
     listener?.destroy();
     const Client = require("@liamcottle/push-receiver/src/client");
     const { androidId, securityToken } = service.data.fcm.credentials.gcm;
     const seen = new Set(service.data.fcm.persistentIds || []);
     listener = new Client(androidId, securityToken, [...seen]);
+    const listeningClient = listener;
     listener.on("ON_DATA_RECEIVED", (message) => {
+      if (listener !== listeningClient) return;
       try {
         if (message.persistentId && seen.has(message.persistentId)) return;
         if (message.persistentId) {
@@ -94,12 +97,16 @@ function createPairing({ service, signIn, report = () => {} }) {
         setPairingStatus("error");
       }
     });
-    listener.on("connect", () => setPairingStatus("listening"));
+    listener.on("connect", () => {
+      if (listener === listeningClient) setPairingStatus("listening");
+    });
     listener.on("disconnect", () => {
+      if (listener !== listeningClient) return;
       service.live.pairError = "Связь с Google прервалась. Подключаемся снова.";
       setPairingStatus("error");
     });
     listener.on("error", () => {
+      if (listener !== listeningClient) return;
       service.live.pairError = "Не удалось подключиться к уведомлениям Google";
       setPairingStatus("error");
     });
@@ -126,6 +133,7 @@ function createPairing({ service, signIn, report = () => {} }) {
     });
   }
   async function start() {
+    if (service.data.fcm?.auth?.SteamId) return;
     if (busy) {
       if (service.live.pairStatus === "steam") {
         signIn.start().catch(() => {});
@@ -134,10 +142,15 @@ function createPairing({ service, signIn, report = () => {} }) {
       throw Error("Подключение уже выполняется");
     }
     busy = true;
+    const attempt = ++generation;
+    const checkAttempt = () => {
+      if (generation !== attempt) throw Error("Вход отменён");
+    };
     let stage = "steam";
     try {
       setPairingStatus("steam");
       const auth = await signIn.start();
+      checkAttempt();
       report("steam-returned");
       stage = "google";
       setPairingStatus("registering");
@@ -153,6 +166,7 @@ function createPairing({ service, signIn, report = () => {} }) {
         config.androidPackageName,
         config.androidPackageCert,
       );
+      checkAttempt();
       stage = "expo";
       report(stage);
       const expo = await postJson(
@@ -166,6 +180,7 @@ function createPairing({ service, signIn, report = () => {} }) {
           projectId: "49451aca-a822-41e6-ad59-955718d0ff9c",
         },
       );
+      checkAttempt();
       if (!expo.data?.expoPushToken)
         throw Error("Expo не выдал токен уведомлений");
       stage = "facepunch";
@@ -179,6 +194,8 @@ function createPairing({ service, signIn, report = () => {} }) {
           PushToken: expo.data.expoPushToken,
         },
       );
+      checkAttempt();
+      service.data.accountSignedOut = false;
       service.data.fcm = {
         credentials,
         auth: { ...auth, Token: registration.Token || auth.Token },
@@ -188,6 +205,7 @@ function createPairing({ service, signIn, report = () => {} }) {
       stage = "listening";
       await listen();
     } catch (error) {
+      if (generation !== attempt) return;
       if (error.message === "Вход отменён") {
         setPairingStatus("idle");
         return;
@@ -212,12 +230,22 @@ function createPairing({ service, signIn, report = () => {} }) {
       setPairingStatus("error");
       throw Error(service.live.pairError);
     } finally {
-      busy = false;
+      if (generation === attempt) busy = false;
     }
   }
   return {
     start,
     listen,
+    async logout() {
+      generation++;
+      busy = false;
+      const previousListener = listener;
+      listener = null;
+      previousListener?.destroy();
+      signIn.cancel();
+      service.signOutAccount();
+      await signIn.logout();
+    },
     cancel: () => signIn.cancel(),
     close: () => {
       signIn.close();

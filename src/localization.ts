@@ -679,6 +679,153 @@ const copy: Record<string, Entry> = {
     },
 };
 
+Object.assign(copy, {
+  "Метка Rust+": { en: "Rust+ map note", zh: "Rust+ 地图标记" },
+  "Вход выполнен": {
+    en: "Signed in",
+    zh: "已登录",
+  },
+  "Выполняется вход": {
+    en: "Signing in",
+    zh: "正在登录",
+  },
+  "Подключаем Rust+": {
+    en: "Connecting Rust+",
+    zh: "正在连接 Rust+",
+  },
+  "Выйти из аккаунта": {
+    en: "Sign out",
+    zh: "退出登录",
+  },
+  "Аккаунт Steam": {
+    en: "Steam account",
+    zh: "Steam 账号",
+  },
+  "Открыть профиль Steam": {
+    en: "Open Steam profile",
+    zh: "打开 Steam 个人资料",
+  },
+  "Растение, которое скрещиваем": {
+    en: "Plant to crossbreed",
+    zh: "要杂交的植物",
+  },
+  "Введи шесть букв у растения в центре грядки. Оно получит гены соседних клонов.":
+    {
+      en: "Enter the six genes of the plant in the centre of the planter. It will receive genes from the nearby clones.",
+      zh: "输入种植箱中央植物的六个基因字母。它会获得邻近克隆植物的基因。",
+    },
+  Рост: {
+    en: "Growth",
+    zh: "生长",
+  },
+  Урожай: {
+    en: "Yield",
+    zh: "产量",
+  },
+  Выносливость: {
+    en: "Hardiness",
+    zh: "耐受性",
+  },
+  "Больше воды": {
+    en: "More water",
+    zh: "耗水增加",
+  },
+  "Пустой ген": {
+    en: "Empty gene",
+    zh: "无效基因",
+  },
+  Рельеф: {
+    en: "Elevation",
+    zh: "地形",
+  },
+  "Рельеф и высота": {
+    en: "Terrain and elevation",
+    zh: "地形与高度",
+  },
+  "Открой сервер в Rust, чтобы загрузить рельеф": {
+    en: "Join this server in Rust to load its terrain",
+    zh: "在 Rust 中进入该服务器以加载地形",
+  },
+  "Все маршруты": {
+    en: "All routes",
+    zh: "所有路线",
+  },
+  "Настройки хитмапа": {
+    en: "Heatmap settings",
+    zh: "热力图设置",
+  },
+  "Скрыть настройки хитмапа": {
+    en: "Hide heatmap settings",
+    zh: "隐藏热力图设置",
+  },
+  "Записать маршрут": {
+    en: "Record route",
+    zh: "记录路线",
+  },
+  "Остановить запись": {
+    en: "Stop recording",
+    zh: "停止记录",
+  },
+  "Любимое место": {
+    en: "Favourite place",
+    zh: "收藏地点",
+  },
+  "Отметить базу": {
+    en: "Mark a base",
+    zh: "标记基地",
+  },
+  "Показать все на этой карте": {
+    en: "Show all on this map",
+    zh: "显示此地图上的所有路线",
+  },
+  "Скрыть маршруты": {
+    en: "Hide routes",
+    zh: "隐藏路线",
+  },
+  "Удалить маршрут": {
+    en: "Delete route",
+    zh: "删除路线",
+  },
+  "Начни запись на карте, и пройденный путь появится здесь.": {
+    en: "Start recording on the map to save your route here.",
+    zh: "在地图上开始记录，行走路线将保存在这里。",
+  },
+  "Маршруты других серверов и прошлых вайпов сохранены в архиве.": {
+    en: "Routes from other servers and previous wipes are kept in the archive.",
+    zh: "其他服务器和之前清档的路线保留在档案中。",
+  },
+  "На сервере": {
+    en: "On this server",
+    zh: "此服务器",
+  },
+  "Все монументы": {
+    en: "All monuments",
+    zh: "所有地标",
+  },
+  "Найти монумент": {
+    en: "Find a monument",
+    zh: "搜索地标",
+  },
+  "Ничего не найдено": {
+    en: "Nothing found",
+    zh: "未找到结果",
+  },
+  Закрыть: {
+    en: "Close",
+    zh: "关闭",
+  },
+  "Войди в Steam, чтобы подключить сохранённый сервер": {
+    en: "Sign in with Steam to connect to a saved server",
+    zh: "通过 Steam 登录以连接已保存的服务器",
+  },
+});
+
+Object.assign(copy, {
+  Записывается: { en: "Recording", zh: "录制中" },
+  км: { en: "km", zh: "公里" },
+  "Вход выполнен": { en: "Signed in", zh: "已登录" },
+});
+
 export function translate(language: Language, visibleText: string) {
   const source =
     copy[visibleText] !== undefined
@@ -691,6 +838,11 @@ export function translate(language: Language, visibleText: string) {
 }
 
 const translatedAttributes = ["aria-label", "placeholder", "title"];
+const textSources = new WeakMap<Text, { source: string; translated: string }>();
+const attributeSources = new WeakMap<
+  Element,
+  Map<string, { source: string; translated: string }>
+>();
 
 function translateNode(root: Node, language: Language) {
   const nodes: Text[] = [];
@@ -707,7 +859,11 @@ function translateNode(root: Node, language: Language) {
     const current = node.textContent || "";
     const trimmed = current.trim();
     if (!trimmed) continue;
-    const translated = translate(language, trimmed);
+    const previous = textSources.get(node);
+    const original =
+      previous?.translated === trimmed ? previous.source : trimmed;
+    const translated = translate(language, original);
+    textSources.set(node, { source: original, translated });
     if (translated !== trimmed)
       node.textContent = current.replace(trimmed, translated);
   }
@@ -720,7 +876,16 @@ function translateNode(root: Node, language: Language) {
     for (const name of translatedAttributes) {
       const current = element.getAttribute(name);
       if (current === null) continue;
-      const translated = translate(language, current);
+      let sources = attributeSources.get(element);
+      if (!sources) {
+        sources = new Map();
+        attributeSources.set(element, sources);
+      }
+      const previous = sources.get(name);
+      const original =
+        previous?.translated === current ? previous.source : current;
+      const translated = translate(language, original);
+      sources.set(name, { source: original, translated });
       if (translated !== current) element.setAttribute(name, translated);
     }
   }

@@ -93,7 +93,7 @@ function decodeWorld(file) {
   if (world.size < 500 || world.size > 10000) throw Error("Invalid world size");
   return world;
 }
-function makeHeatmaps(world, resolution = 384) {
+function makeHeatmaps(world, resolution = 768) {
   const layers = Object.fromEntries(
     world.maps.map((layer) => [layer.name, Buffer.from(layer.data)]),
   );
@@ -185,6 +185,53 @@ function makeHeatmaps(world, resolution = 384) {
     }
     categories[name] = result.toString("base64");
   }
-  return { resolution, worldSize: world.size, categories };
+  return {
+    resolution,
+    worldSize: world.size,
+    categories,
+    elevation: makeElevation(world),
+  };
 }
-module.exports = { decodeBlock, decodeWorld, makeHeatmaps };
+function makeElevation(world, resolution = 512) {
+  const layer =
+    world.maps.find((map) => map.name === "height") ||
+    world.maps.find((map) => map.name === "terrain");
+  if (!layer) return undefined;
+  const source = Buffer.from(layer.data);
+  const side = Math.sqrt(source.length / 2);
+  if (!Number.isInteger(side) || side < 2) throw Error("Invalid height layer");
+  const values = Buffer.alloc(resolution * resolution * 2);
+  let min = Infinity,
+    max = -Infinity;
+  const height = (x, y) =>
+    (source.readInt16LE((y * side + x) * 2) / 32766) * 1000 - 500;
+  for (let row = 0; row < resolution; row++) {
+    const sy = (row / (resolution - 1)) * (side - 1),
+      y0 = Math.floor(sy),
+      y1 = Math.min(side - 1, y0 + 1),
+      ty = sy - y0;
+    for (let column = 0; column < resolution; column++) {
+      const sx = (column / (resolution - 1)) * (side - 1),
+        x0 = Math.floor(sx),
+        x1 = Math.min(side - 1, x0 + 1),
+        tx = sx - x0;
+      const meters =
+        (height(x0, y0) * (1 - tx) + height(x1, y0) * tx) * (1 - ty) +
+        (height(x0, y1) * (1 - tx) + height(x1, y1) * tx) * ty;
+      const value = Math.round(meters * 10);
+      values.writeInt16LE(
+        value,
+        ((resolution - row - 1) * resolution + column) * 2,
+      );
+      min = Math.min(min, meters);
+      max = Math.max(max, meters);
+    }
+  }
+  return {
+    resolution,
+    values: values.toString("base64"),
+    min: Math.floor(min),
+    max: Math.ceil(max),
+  };
+}
+module.exports = { decodeBlock, decodeWorld, makeHeatmaps, makeElevation };

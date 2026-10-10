@@ -8,6 +8,9 @@ function defaultData(language = "en") {
     devices: [],
     timers: [],
     pins: [],
+    routes: [],
+    tracking: false,
+    accountSignedOut: false,
     events: [],
     census: [],
     settings: {
@@ -69,6 +72,12 @@ function publicSnapshot(state) {
     pins: state.pins,
     events: state.events.filter((event) => event.kind !== "world"),
     census: state.census,
+    routes: state.routes || [],
+    tracking: Boolean(state.tracking),
+    requiresSignIn: Boolean(state.accountSignedOut),
+    account: state.fcm?.auth?.SteamId
+      ? { steamId: String(state.fcm.auth.SteamId) }
+      : null,
     settings: {
       ...state.settings,
       notificationKinds: { ...state.settings.notificationKinds },

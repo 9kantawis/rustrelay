@@ -215,6 +215,15 @@ function createSteamSignIn({ window, onChange, report = () => {} }) {
   return {
     start,
     cancel: () => active?.cancel(),
+    async logout() {
+      active?.cancel();
+      const browserSession = require("electron").session.fromPartition(
+        "persist:rust-sign-in",
+      );
+      await browserSession.clearStorageData();
+      await browserSession.clearAuthCache();
+      await browserSession.clearCache();
+    },
     retry: () => active?.retry(),
     back: () => {
       const contents = active?.view.webContents;

@@ -38,7 +38,7 @@ async function build() {
         continue;
       const key = crypto
         .createHash("sha256")
-        .update(`v1:${path.basename(file)}:${stat.size}:${stat.mtimeMs}`)
+        .update(`v2:${path.basename(file)}:${stat.size}:${stat.mtimeMs}`)
         .digest("hex");
       const cache =
         cacheDirectory && path.join(cacheDirectory, key + ".json.gz");
@@ -47,12 +47,12 @@ async function build() {
           if ((await fs.stat(cache)).size < 16 * 1024 * 1024) {
             const heatmap = JSON.parse(
               zlib.gunzipSync(await fs.readFile(cache), {
-                maxOutputLength: 8 * 1024 * 1024,
+                maxOutputLength: 32 * 1024 * 1024,
               }),
             );
             if (
               heatmap.worldSize === info.mapSize &&
-              heatmap.resolution === 384
+              heatmap.resolution === 768
             )
               return { status: "ready", heatmap };
           }

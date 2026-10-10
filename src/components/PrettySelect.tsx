@@ -7,11 +7,13 @@ import {
   type ReactNode,
 } from "react";
 import { Check, ChevronDown } from "lucide-react";
+import ItemIcon from "./ItemIcon";
 
 export type SelectOption = {
   value: string;
   label: ReactNode;
   disabled?: boolean;
+  icon?: string;
 };
 
 type Props = {
@@ -106,7 +108,10 @@ export default function PrettySelect({
           }
         }}
       >
-        <span>{selected?.label}</span>
+        <span className="select-item-label">
+          {selected?.icon && <ItemIcon item={selected.icon} size={24} />}
+          {selected?.label}
+        </span>
         <ChevronDown size={15} aria-hidden="true" />
       </button>
       {open && (
@@ -122,7 +127,10 @@ export default function PrettySelect({
               onPointerEnter={() => setActiveIndex(index)}
               onClick={() => choose(index)}
             >
-              <span>{option.label}</span>
+              <span className="select-item-label">
+                {option.icon && <ItemIcon item={option.icon} size={24} />}
+                {option.label}
+              </span>
               {index === selectedIndex && (
                 <Check size={14} aria-hidden="true" />
               )}

@@ -1,6 +1,6 @@
 {
   "name": "rust-relay",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "description": "Free Rust+ companion for Windows",
   "main": "electron/main.cjs",

@@ -1,3 +1,4 @@
+import Monuments from "./features/Monuments";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Activity,
@@ -238,27 +239,7 @@ export default function App() {
     screen = (
       <Events state={state} runAction={runAction} navigateTo={navigateTo} />
     );
-  else
-    screen = (
-      <section className="panel content-panel">
-        <h2>Монументы на карте</h2>
-        {state.map?.monuments?.length ? (
-          state.map.monuments.map((monument, index) => (
-            <div className="list-row" key={`${monument.token}-${index}`}>
-              <strong>{monument.token}</strong>
-              <span className="muted">
-                {Math.round(monument.x)}, {Math.round(monument.y)}
-              </span>
-            </div>
-          ))
-        ) : (
-          <div className="empty">
-            <Crosshair size={32} strokeWidth={1} />
-            <p>Подключи сервер, чтобы увидеть монументы на его карте.</p>
-          </div>
-        )}
-      </section>
-    );
+  else screen = <Monuments state={state} runAction={runAction} />;
 
   return (
     <div
@@ -351,7 +332,7 @@ export default function App() {
             <span>Настройки</span>
           </button>
           <span className="app-version">
-            RustRelay <span>0.1.7</span>
+            RustRelay <span>0.1.8</span>
           </span>
         </div>
       </aside>
