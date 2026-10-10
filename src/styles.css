@@ -3208,3 +3208,111 @@ select option:disabled {
   z-index: 4;
   pointer-events: none;
 }
+
+.map-raster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.page-map .page-content > .panel {
+  flex: 1;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.map-terrain,
+.map-density {
+  contain: layout paint;
+}
+
+.puzzle-walkthrough {
+  margin: 24px 0;
+}
+.puzzle-step-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.puzzle-step-tabs button {
+  min-width: 34px;
+  height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--muted);
+}
+.puzzle-step-tabs button.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(235, 153, 92, 0.08);
+}
+.puzzle-photo {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: #0c0d0e;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.puzzle-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+.puzzle-photo > span {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  background: #121313ce;
+  color: #fff;
+}
+.puzzle-step-caption {
+  min-height: 44px;
+  margin: 14px 0;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.puzzle-step-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+.puzzle-step-footer > div {
+  display: flex;
+  gap: 8px;
+}
+.puzzle-credit {
+  font-size: 12px;
+  color: var(--muted);
+}
+.puzzle-photo-dialog {
+  width: min(1240px, calc(100vw - 40px));
+}
+.puzzle-photo-dialog img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 210px);
+  object-fit: contain;
+}
+.puzzle-photo-dialog p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+@media (max-width: 960px) {
+  .puzzle-step-footer {
+    flex-wrap: wrap;
+  }
+  .puzzle-step-caption {
+    font-size: 14px;
+  }
+}

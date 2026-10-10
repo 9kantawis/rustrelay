@@ -114,6 +114,7 @@ function contourPath(values, side, threshold, smooth = true) {
   return paths.join("");
 }
 function simplifyLine(points, tolerance) {
+  if (points.length < 3) return points.slice();
   const keep = new Set([0, points.length - 1]),
     stack = [[0, points.length - 1]];
   while (stack.length) {

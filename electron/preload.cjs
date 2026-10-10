@@ -18,7 +18,6 @@ const allowed = new Set([
   "listen",
   "logout",
   "openSteamProfile",
-  "tracking",
   "deleteRoute",
   "addTimer",
   "deleteTimer",

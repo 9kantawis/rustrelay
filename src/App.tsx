@@ -1,3 +1,4 @@
+import { mergeState } from "../shared/state-updates.cjs";
 import Monuments from "./features/Monuments";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
@@ -159,7 +160,9 @@ export default function App() {
       ?.invoke("state")
       .then((value) => value && setState(value))
       .catch((error) => setError(error.message));
-    return window.relay?.subscribe(setState);
+    return window.relay?.subscribe((update) =>
+      setState((current) => mergeState(current, update)),
+    );
   }, []);
   useEffect(
     () => installInterfaceTranslator(state.settings.language),

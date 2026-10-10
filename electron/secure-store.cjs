@@ -25,6 +25,7 @@ function defaultData(language = "en") {
       },
       autoStart: false,
       closeToTray: true,
+      showRoutes: true,
       motion: true,
       glass: true,
       bot: false,
@@ -73,7 +74,6 @@ function publicSnapshot(state) {
     events: state.events.filter((event) => event.kind !== "world"),
     census: state.census,
     routes: state.routes || [],
-    tracking: Boolean(state.tracking),
     requiresSignIn: Boolean(state.accountSignedOut),
     account: state.fcm?.auth?.SteamId
       ? { steamId: String(state.fcm.auth.SteamId) }

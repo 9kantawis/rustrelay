@@ -1,0 +1,995 @@
+{
+  "satellite-dish": {
+    "source": "https://www.rustafied.com/monument-puzzle-basic-green-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "satellite-dish-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620266378460-54PSUUKCHV1IY5WGG9XO/700580_20210505215915_1.png",
+        "text": [
+          "У тарелок найди две металлические будки.",
+          "Find the pair of metal sheds beside the dishes.",
+          "找到卫星天线旁的两间金属小屋。"
+        ]
+      },
+      {
+        "image": "satellite-dish-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620266442863-MV5A0WTBGPG61BR4AB9Z/700580_20210505220019_1.png",
+        "text": [
+          "Вставь предохранитель в щиток первой будки.",
+          "Fit a fuse inside the first shed.",
+          "在第一间小屋内装入保险丝。"
+        ]
+      },
+      {
+        "image": "satellite-dish-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620266509398-ORWFSUE3FAJ0DRUKK1HT/700580_20210505220118_1.png",
+        "text": [
+          "Обойди эту будку и включи переключатель сзади.",
+          "Use the switch on its rear wall.",
+          "绕到小屋后面打开墙上的开关。"
+        ]
+      },
+      {
+        "image": "satellite-dish-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620266524179-RI99VQ2DXY30N4481S60/700580_20210505220135_1.png",
+        "text": [
+          "У второй будки проведи зелёной картой по считывателю.",
+          "Use a green card on the other shed.",
+          "在另一间小屋的读卡器刷绿卡。"
+        ]
+      }
+    ]
+  },
+  "harbor": {
+    "source": "https://www.rustafied.com/monument-puzzle-basic-green-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "harbor-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528512751086-3OUN8D1VX1PYXBKNAD14/image-asset.png",
+        "text": [
+          "Найди двухэтажную будку у причала.",
+          "Locate the two-storey dock office.",
+          "找到码头旁的两层办公室。"
+        ]
+      },
+      {
+        "image": "harbor-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528509368692-GDY56N7AMFHTVC56AYB8/image-asset.png",
+        "text": [
+          "На первом этаже вставь предохранитель и включи питание.",
+          "Insert a fuse and turn on power downstairs.",
+          "在一楼装入保险丝并接通电源。"
+        ]
+      },
+      {
+        "image": "harbor-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528509303425-NHCNK52Q4ASPVDSMTESF/image-asset.png",
+        "text": [
+          "По наружной лестнице поднимись к зелёной двери.",
+          "Take the outside stairs to the green-card door.",
+          "沿外侧楼梯到绿卡门。"
+        ]
+      },
+      {
+        "image": "harbor-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528509526466-J09KMRBKBDSELF2CRYRQ/image-asset.png",
+        "text": [
+          "Внутри проверь стол с синей картой и ящики.",
+          "Inside, check the desk for a blue card and loot the crates.",
+          "在里面拿桌上的蓝卡并搜刮箱子。"
+        ]
+      }
+    ]
+  },
+  "harbor-2": {
+    "source": "https://www.rustafied.com/monument-puzzle-basic-green-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "harbor-2-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528505297607-OR9XJIPSRE2UO0VO8SCA/252490_20180608204756_1.png",
+        "text": [
+          "Включи переключатель на внешней стене небольшой будки.",
+          "Switch on power outside the small utility building.",
+          "打开小型设备间外墙的开关。"
+        ]
+      },
+      {
+        "image": "harbor-2-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528506612757-8BMZ4SSSG4HU03KL9R8I/image-asset.png",
+        "text": [
+          "Зайди внутрь и вставь предохранитель.",
+          "Put a fuse in the box inside.",
+          "进入设备间并装入保险丝。"
+        ]
+      },
+      {
+        "image": "harbor-2-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528506659874-VJZ6VZ9Z26CG9N67BE6Z/image-asset.png",
+        "text": [
+          "В большом ангаре ищи зелёную дверь в дальнем правом углу.",
+          "The green-card room is at the rear right of the hangar.",
+          "大机库右后角有绿卡门。"
+        ]
+      }
+    ]
+  },
+  "sewer-branch": {
+    "source": "https://www.rustafied.com/monument-puzzle-basic-green-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "sewer-branch-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267099071-KSNFX900NOTY58D6E6OE/700580_20210505221052_1.png",
+        "text": [
+          "Разбей деревянную дверь красного здания.",
+          "Break the wooden door on the red building.",
+          "打破红色建筑的木门。"
+        ]
+      },
+      {
+        "image": "sewer-branch-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267108422-BAJT33237DLP1M90J7D7/700580_20210505221130_1.png",
+        "text": [
+          "Внутри установи предохранитель и включи питание.",
+          "Fit the fuse and enable the nearby switch.",
+          "在里面装入保险丝并打开旁边的开关。"
+        ]
+      },
+      {
+        "image": "sewer-branch-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267171672-G0LIRYYS81G5WVMSEKC2/700580_20210505221225_1.png",
+        "text": [
+          "Спустись в люк. В туннеле поверни налево.",
+          "Climb down the shaft and take the left tunnel.",
+          "从竖井下去，沿左侧隧道走。"
+        ]
+      },
+      {
+        "image": "sewer-branch-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528511055678-MJQ90DCY7IJHL8K0SI6E/252490_20180608221313_1.png",
+        "text": [
+          "Проведи зелёной картой у двери в туннеле.",
+          "Use green at the tunnel door.",
+          "在隧道门口刷绿卡。"
+        ]
+      },
+      {
+        "image": "sewer-branch-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528511142826-22347TGA1FU72HZ1N5M7/image-asset.png",
+        "text": [
+          "По проходу за дверью забери лут и синюю карту.",
+          "Follow the passage beyond it for crates and the blue card.",
+          "沿门后的通道拿战利品和蓝卡。"
+        ]
+      }
+    ]
+  },
+  "airfield": {
+    "source": "https://www.rustafied.com/monument-puzzles-medium-blue-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "airfield-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528590412641-7ZDHHGZQGJ6K250N4LWH/image-asset.png",
+        "text": [
+          "Зайди в главное здание через левый гараж.",
+          "Enter the main building through its left garage.",
+          "从左侧车库进入主楼。"
+        ]
+      },
+      {
+        "image": "airfield-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528590504888-71OKMNS2PFY3ASXUCDHX/image-asset.png",
+        "text": [
+          "В комнате справа поставь первый предохранитель и запусти таймер.",
+          "Fit the first fuse in the right-hand room; start its timer.",
+          "在右侧房间装入第一根保险丝，启动定时器。"
+        ]
+      },
+      {
+        "image": "airfield-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528591201484-QAMDBCFV8PO6MQWIAYGO/252490_20180609203942_1.png",
+        "text": [
+          "Найди люк напротив ангаров. Внизу двигайся вправо.",
+          "Use the shaft facing the hangars, then turn right.",
+          "找到机库对面的竖井，下去后右转。"
+        ]
+      },
+      {
+        "image": "airfield-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528592803251-IAWTZ7GTANFK62IG2MSJ/image-asset.png",
+        "text": [
+          "Зелёная карта откроет первый проход.",
+          "The green reader opens the first passage.",
+          "刷绿卡打开第一道门。"
+        ]
+      },
+      {
+        "image": "airfield-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528592976492-6HKHFRIMVSU1QJS2W6QK/252490_20180609210909_1.png",
+        "text": [
+          "За дверью справа находится второй щиток. Поставь ещё один предохранитель.",
+          "The next fuse box is through the door on the right.",
+          "进入右侧门，给第二个保险丝盒装入保险丝。"
+        ]
+      },
+      {
+        "image": "airfield-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528593046724-KPBAS2DE7J58XR28YEHR/image-asset.png",
+        "text": [
+          "Вернись к синей двери рядом с первым проходом и проведи синей картой.",
+          "Return to the blue reader beside the first passage.",
+          "返回第一道门旁的蓝卡门并刷蓝卡。"
+        ]
+      },
+      {
+        "image": "airfield-7.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528593174290-M9VT5QY03YXXXC0WEBMH/image-asset.png",
+        "text": [
+          "Обыщи комнату, забери красную карту и выйди тем же путём.",
+          "Search the room for crates and the red card.",
+          "搜刮房间，拿走红卡，原路返回。"
+        ]
+      }
+    ]
+  },
+  "power-plant": {
+    "source": "https://www.rustafied.com/monument-puzzles-medium-blue-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "power-plant-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528586964265-EG7RHHZQU8XB3E4U9CV4/image-asset.png",
+        "text": [
+          "Начни с трёхэтажного здания на краю электростанции.",
+          "Start at the three-storey building on the edge.",
+          "从电站边缘的三层建筑开始。"
+        ]
+      },
+      {
+        "image": "power-plant-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528587003915-9S7LB42DVLJADDY7NO3P/252490_20180609192908_1.png",
+        "text": [
+          "Включи переключатель под лестницей.",
+          "Enable the switch beneath the stairs.",
+          "打开楼梯下的开关。"
+        ]
+      },
+      {
+        "image": "power-plant-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528587277037-AC008H6BJ3ORWAHSDA8O/252490_20180609193242_1.png",
+        "text": [
+          "Перейди к короткому зданию с наклонной крышей.",
+          "Cross to the low building with a sloping roof.",
+          "前往斜屋顶的低矮建筑。"
+        ]
+      },
+      {
+        "image": "power-plant-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528587616373-1M38DJPY345LQUUKKNEY/image-asset.png",
+        "text": [
+          "Внутри включи переключатель и таймер.",
+          "Activate both the switch and its timer.",
+          "在里面打开开关并启动定时器。"
+        ]
+      },
+      {
+        "image": "power-plant-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528588689982-BPK06S28DYKYXM642ZKR/image-asset.png",
+        "text": [
+          "Вернись к главному зданию и открой зелёную дверь.",
+          "Use a green card at the main building.",
+          "回到主楼并刷绿卡开门。"
+        ]
+      },
+      {
+        "image": "power-plant-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528588810036-PM0ZOFM82IM37KMLLVUU/image-asset.png",
+        "text": [
+          "На первом этаже включи ещё один переключатель.",
+          "Turn on the ground-floor switch.",
+          "打开一楼的另一个开关。"
+        ]
+      },
+      {
+        "image": "power-plant-7.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528589037427-OMSDOJXR8FFVDJPDJPHW/image-asset.png",
+        "text": [
+          "Поднимись на два пролёта. За углом вставь обычный предохранитель.",
+          "Two flights up, fit a regular fuse around the corner.",
+          "上两段楼梯，在拐角装入普通保险丝。"
+        ]
+      },
+      {
+        "image": "power-plant-8.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528589145968-TIZPCV7TZDR92ALTHQT5/252490_20180609200533_1.png",
+        "text": [
+          "Открой синюю дверь. Красная карта выше, на следующем этаже.",
+          "Enter with a blue card; the red card is upstairs.",
+          "刷蓝卡进门；红卡在上一层。"
+        ]
+      }
+    ]
+  },
+  "train-yard": {
+    "source": "https://www.rustafied.com/monument-puzzles-medium-blue-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "train-yard-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267303353-B7J1KOF654XVD6CZANVW/700580_20210505151755_1.png",
+        "text": [
+          "Зайди в трёхэтажное здание рядом с путями.",
+          "Enter the three-storey trackside building.",
+          "进入铁轨旁的三层建筑。"
+        ]
+      },
+      {
+        "image": "train-yard-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267435944-EZ1Z7XHUCW1BUIH5UUDY/700580_20210505221623_1.png",
+        "text": [
+          "В центре первого этажа включи переключатель.",
+          "Use the switch in the middle of its ground floor.",
+          "打开一楼中间的开关。"
+        ]
+      },
+      {
+        "image": "train-yard-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267455822-1HD2RJAQOJQVLXIJX30G/700580_20210505221613_1.png",
+        "text": [
+          "В отдельном здании поднимись на крышу.",
+          "Climb the separate building to its roof.",
+          "爬上另一栋建筑的屋顶。"
+        ]
+      },
+      {
+        "image": "train-yard-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267521129-3E2GW21N6U3477QXWWNA/700580_20210505221817_1.png",
+        "text": [
+          "Снаружи на верхнем этаже включи второй переключатель.",
+          "Enable the second switch outside on the top floor.",
+          "打开顶层外侧的第二个开关。"
+        ]
+      },
+      {
+        "image": "train-yard-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267533568-ETXDOOOD8FM6145CKPC8/700580_20210505221830_1.png",
+        "text": [
+          "Теперь иди в главное здание пазла, на первый лестничный пролёт.",
+          "Head to the first landing in the main puzzle building.",
+          "前往主谜题楼的第一个楼梯平台。"
+        ]
+      },
+      {
+        "image": "train-yard-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267850721-9NOMC4QAOPIG61OZD951/700580_20210505222005_1.png",
+        "text": [
+          "В дальнем правом углу поставь предохранитель и включи питание.",
+          "Fit the fuse and switch at the rear right.",
+          "在右后角装入保险丝并打开开关。"
+        ]
+      },
+      {
+        "image": "train-yard-7.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267861544-7A5OB72NG2EKH4VP5DAZ/700580_20210505222331_1.png",
+        "text": [
+          "Следующая дверь выше по лестнице открывается зелёной картой.",
+          "The next door upstairs takes a green card.",
+          "沿楼梯上去，用绿卡打开下一扇门。"
+        ]
+      },
+      {
+        "image": "train-yard-8.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1620267883503-JA8Q09XFIWW3VD6BOMDR/700580_20210505222319_1.png",
+        "text": [
+          "Ещё один пролёт выше находится синяя дверь с основным лутом.",
+          "One more flight leads to the blue-card loot room.",
+          "再上一段楼梯即可到蓝卡战利品房间。"
+        ]
+      }
+    ]
+  },
+  "water-treatment-plant": {
+    "source": "https://www.rustafied.com/monument-puzzles-medium-blue-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "water-treatment-plant-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528595914168-E03E26VOJH16GYQ3RUUG/252490_20180609215627_1.png",
+        "text": [
+          "В центре найди ворота с колесом. Зажми E на колесе и пройди внутрь.",
+          "Hold E on the central blast-door wheel to enter.",
+          "在中央防爆门的轮子上按住E进入。"
+        ]
+      },
+      {
+        "image": "water-treatment-plant-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528595970403-H0RMVU3AUOR3ZG1HAFO1/image-asset.png",
+        "text": [
+          "В комнате наверху слева поставь предохранитель и включи таймер.",
+          "Fit the fuse in the upstairs left room and start its timer.",
+          "在楼上左侧房间装入保险丝并启动定时器。"
+        ]
+      },
+      {
+        "image": "water-treatment-plant-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528596027455-KH1PT5404M77PH2U60AM/image-asset.png",
+        "text": [
+          "Перейди к зданию с наружной лестницей.",
+          "Cross to the building with the external stairs.",
+          "前往带外部楼梯的建筑。"
+        ]
+      },
+      {
+        "image": "water-treatment-plant-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528596319342-6UQFZ8DGKQ0DWG8RKEB8/252490_20180609220216_1.png",
+        "text": [
+          "Поднимись на второй этаж и открой синюю дверь.",
+          "Go upstairs and use the blue-card reader.",
+          "上二楼并刷蓝卡开门。"
+        ]
+      },
+      {
+        "image": "water-treatment-plant-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528596364471-84AQKUDNG0RHAHFZHH3V/image-asset.png",
+        "text": [
+          "Обыщи помещения, забери ящики и красную карту.",
+          "Search the rooms for crates and the red card.",
+          "搜刮各房间，拿走箱子和红卡。"
+        ]
+      },
+      {
+        "image": "water-treatment-plant-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528596393635-4J6AMS4Q8BMHG17OEDZ1/image-asset.png",
+        "text": [
+          "Для выхода включи переключатель в заднем офисе.",
+          "The back-office switch releases the exit.",
+          "打开后方办公室的开关以离开。"
+        ]
+      }
+    ]
+  },
+  "launch-site": {
+    "source": "https://www.rustafied.com/monument-puzzles-advanced-red-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "launch-site-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529001013124-AKLL9XRA7ACXTWVYCEEW/252490_20180614142015_1.png",
+        "text": [
+          "Найди зелёное здание с номером 011.",
+          "Locate the green building numbered 011.",
+          "找到编号011的绿色建筑。"
+        ]
+      },
+      {
+        "image": "launch-site-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529001095020-LHR57DXZKATYGKFYLM78/image-asset.png",
+        "text": [
+          "Внутри включи первый переключатель.",
+          "Enable its indoor switch.",
+          "打开里面的第一个开关。"
+        ]
+      },
+      {
+        "image": "launch-site-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529001120560-SVCPEFEX3KKOH8REIWZP/252490_20180614142218_1.png",
+        "text": [
+          "За ракетой иди к каменному зданию с металлическим пандусом.",
+          "Pass the rocket toward the stone building with a ramp.",
+          "穿过火箭区域，前往带金属坡道的石砌建筑。"
+        ]
+      },
+      {
+        "image": "launch-site-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529001210409-WANI5JFQCDTVI6QD2DUR/image-asset.png",
+        "text": [
+          "Спустись по лестнице. Переключатель в комнате слева.",
+          "Go downstairs to the switch in the left room.",
+          "下楼，打开左侧房间的开关。"
+        ]
+      },
+      {
+        "image": "launch-site-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529024826862-T1M0N1GDJVXZ4NDKADN4/image-asset.png",
+        "text": [
+          "Зелёная дверь находится в небольшом здании у трёх силосов.",
+          "Use green at the small building beside three silos.",
+          "在三个筒仓旁的小楼刷绿卡。"
+        ]
+      },
+      {
+        "image": "launch-site-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529024868385-PFQ34T4HRB7ZLGJVV9UP/image-asset.png",
+        "text": [
+          "За зелёной дверью поставь первый предохранитель и включи переключатель.",
+          "Beyond green, fit the first fuse and enable the switch.",
+          "进入绿卡门，装入第一根保险丝并打开开关。"
+        ]
+      },
+      {
+        "image": "launch-site-7.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529025081581-1CWOYMWKLL3AQKKI5HI8/image-asset.png",
+        "text": [
+          "Обойди здание к двум синим контейнерам. Вход рядом с ними.",
+          "Go around to the two blue containers and enter beside them.",
+          "绕到两个蓝色集装箱旁，从旁边入口进入。"
+        ]
+      },
+      {
+        "image": "launch-site-8.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529025145725-P82V2VLPNAGUXL4D0U6T/image-asset.png",
+        "text": [
+          "Внутри поставь второй предохранитель и включи питание.",
+          "Inside, fit the second fuse and switch on power.",
+          "在里面装入第二根保险丝并接通电源。"
+        ]
+      },
+      {
+        "image": "launch-site-9.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529025175807-CYGF3R7V7WWU2UJGX5YD/image-asset.png",
+        "text": [
+          "В главном здании красная дверь справа. Проведи красной картой.",
+          "Use red at the right-hand door of the main building.",
+          "在主楼右侧红卡门刷红卡。"
+        ]
+      },
+      {
+        "image": "launch-site-10.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1529027284607-4Y1M4XB8S5JD12O1IYXF/image-asset.png",
+        "text": [
+          "Поднимись за лутом. Перед выходом включи внутренний переключатель.",
+          "Climb for loot and use the indoor switch before leaving.",
+          "上楼拿战利品，离开前打开内部开关。"
+        ]
+      }
+    ]
+  },
+  "military-tunnel": {
+    "source": "https://www.rustafied.com/monument-puzzles-advanced-red-solutions",
+    "credit": "Rustafied",
+    "steps": [
+      {
+        "image": "military-tunnel-1.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528944180126-0M4U104ORVREQ2KREAFA/image-asset.png",
+        "text": [
+          "В центральном входе выбери правую дверь.",
+          "Take the right-hand door at the main entrance.",
+          "在主入口选择右侧门。"
+        ]
+      },
+      {
+        "image": "military-tunnel-2.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528944437210-YLWM59WPRBVTUD6OVSJJ/image-asset.png",
+        "text": [
+          "За поворотом ищи надпись Armory справа.",
+          "Follow the tunnel to the Armory sign on the right.",
+          "沿隧道走，找到右侧Armory标志。"
+        ]
+      },
+      {
+        "image": "military-tunnel-3.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528944541730-GFDKAP8IJ4R4QMI5HVO2/image-asset.png",
+        "text": [
+          "В первой комнате справа вставь предохранитель и запусти таймер.",
+          "Fit a fuse and start the timer in the first right-hand room.",
+          "在右侧第一间房装入保险丝并启动定时器。"
+        ]
+      },
+      {
+        "image": "military-tunnel-4.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528945671472-76T0QN9N5V52O2LOZ9C2/image-asset.png",
+        "text": [
+          "Вернись в основной туннель и двигайся по правому изгибу.",
+          "Return to the main tunnel and follow its right bend.",
+          "回到主隧道，沿右弯前进。"
+        ]
+      },
+      {
+        "image": "military-tunnel-5.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528945552176-7Z3EYMV968XVGN4L1VZ2/image-asset.png",
+        "text": [
+          "Пройди через дыру в ограде слева, затем поверни налево.",
+          "Pass the gap in the left fence, then turn left.",
+          "穿过左侧围栏缺口后左转。"
+        ]
+      },
+      {
+        "image": "military-tunnel-6.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528945752373-0LUP6WNP4J3HS5N8NGWZ/252490_20180613225250_1.png",
+        "text": [
+          "Напротив путей открой зелёную дверь Storage.",
+          "Across the tracks, use a green card at Storage.",
+          "在铁轨对面刷绿卡打开Storage门。"
+        ]
+      },
+      {
+        "image": "military-tunnel-7.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528946540630-5ZPHW0WLB192R9ZC5W85/image-asset.png",
+        "text": [
+          "Внутри справа включи переключатель Laboratory.",
+          "Inside on the right, enable the Laboratory switch.",
+          "在里面右侧打开Laboratory开关。"
+        ]
+      },
+      {
+        "image": "military-tunnel-8.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528947135123-UFQYT9CFT4A43LEJJP50/image-asset.png",
+        "text": [
+          "По пути забери элитные ящики в центральном вагоне.",
+          "Check the middle railcar for elite crates.",
+          "沿路搜刮中间车厢的精英箱。"
+        ]
+      },
+      {
+        "image": "military-tunnel-9.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528946817167-G7KSD8AACTJ03RPBNBDQ/image-asset.png",
+        "text": [
+          "Дальше справа найди синюю дверь Laboratory.",
+          "Further along, the blue Laboratory door is on the right.",
+          "继续前进，右侧有蓝卡Laboratory门。"
+        ]
+      },
+      {
+        "image": "military-tunnel-10.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528947454352-VRQ1BW556146VJPOGC2F/252490_20180613233612_1.png",
+        "text": [
+          "За синей дверью включи таймер под красным считывателем и проведи красной картой.",
+          "Beyond it, start the timer beneath the red reader and swipe.",
+          "进入蓝卡门后，启动红色读卡器下的定时器并刷红卡。"
+        ]
+      },
+      {
+        "image": "military-tunnel-11.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528947500438-8WW4C64SOUFDFFF8OCI9/252490_20180613233700_1.png",
+        "text": [
+          "Зачисти лабораторию и осмотри стеллажи с ящиками.",
+          "Clear the laboratory and search its crate shelves.",
+          "清理实验室并搜刮架子上的箱子。"
+        ]
+      },
+      {
+        "image": "military-tunnel-12.webp",
+        "photoSource": "https://images.squarespace-cdn.com/content/v1/5420d068e4b09194f76b2af6/1528947617022-BHPHA9XWRIM9HDTSWMVC/image-asset.png",
+        "text": [
+          "Выход слева ведёт в шахту. Дверь открывается кнопкой изнутри.",
+          "The left exit leads to the silo; its button is inside.",
+          "左侧出口通往竖井，按内部按钮开门。"
+        ]
+      }
+    ]
+  },
+  "ferry-terminal": {
+    "source": "https://jaguidesgaming.com/ferry-terminal-puzzle-guide-in-rust/",
+    "credit": "JA Guides",
+    "steps": [
+      {
+        "image": "ferry-terminal-1.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_00-46.avif",
+        "text": [
+          "У терминала найди контейнеры с проводами к стенам.",
+          "Find the wired containers near the terminal.",
+          "找到码头附近接有电线的集装箱。"
+        ]
+      },
+      {
+        "image": "ferry-terminal-2.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_01-09.avif",
+        "text": [
+          "По проводу перейди к контейнеру с щитком.",
+          "Follow the cable to the container holding the fuse box.",
+          "沿电线前往装有保险丝盒的集装箱。"
+        ]
+      },
+      {
+        "image": "ferry-terminal-3.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_01-19.avif",
+        "text": [
+          "Зайди внутрь и вставь предохранитель.",
+          "Enter and install your fuse.",
+          "进入并装入保险丝。"
+        ]
+      },
+      {
+        "image": "ferry-terminal-4.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_01-33.avif",
+        "text": [
+          "Снаружи за контейнером включи переключатель.",
+          "Enable the switch behind this container.",
+          "打开集装箱背面的开关。"
+        ]
+      },
+      {
+        "image": "ferry-terminal-5.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_01-42.avif",
+        "text": [
+          "Вернись к первому контейнеру со считывателем.",
+          "Return to the first container with the card reader.",
+          "返回带读卡器的第一个集装箱。"
+        ]
+      },
+      {
+        "image": "ferry-terminal-6.webp",
+        "photoSource": "https://cdn.jaguidesgaming.com/2026/08/Ferry-Terminal-Puzzle-Guide-in-Rust_at_01-49.avif",
+        "text": [
+          "Проведи зелёной картой. Внутри лут, синяя карта и фрагмент чертежа.",
+          "Swipe green for the loot room, blue card and fragment.",
+          "刷绿卡进入，拿战利品、蓝卡和蓝图碎片。"
+        ]
+      }
+    ]
+  },
+  "missile-silo": {
+    "source": "https://www.corrosionhour.com/rust-nuclear-missile-silo-monument-guide/",
+    "credit": "Corrosion Hour",
+    "steps": [
+      {
+        "image": "missile-silo-1.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2023/05/rust-missile-silo-monument-blue-keycard-and-guard-tower-1024x526.jpg",
+        "text": [
+          "Рядом с большой антенной найди небольшую комнату управления.",
+          "Find the control room beside the tall communications tower.",
+          "找到大型通信塔旁的控制室。"
+        ]
+      },
+      {
+        "image": "missile-silo-2.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2023/05/rust-missile-silo-monument-blue-keycard-puzzle-1024x526.jpg",
+        "text": [
+          "Используй красную карту и нажми красную кнопку.",
+          "Swipe a red card, then press the red button.",
+          "刷红卡，然后按红色按钮。"
+        ]
+      },
+      {
+        "image": "missile-silo-3.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2023/05/rust-missile-silo-monument-nuclear-missile-hatch-open-1024x526.jpg",
+        "text": [
+          "Центральная крышка открыта. Спускайся на платформы внутри.",
+          "The central hatch opens; drop onto the platforms inside.",
+          "中央舱盖打开后，跳到内部平台上。"
+        ]
+      },
+      {
+        "image": "missile-silo-4.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2023/05/missile-silo-monument-level-zero-inside-1024x526.jpg",
+        "text": [
+          "Двигайся по освещённым платформам и зачищай нижние этажи.",
+          "Follow the lit platforms and clear the lower floors.",
+          "沿照明平台前进并清理下层。"
+        ]
+      },
+      {
+        "image": "missile-silo-5.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2023/05/rust-missile-silo-monument-level-0-cont-open-blast-doors-1024x526.jpg",
+        "text": [
+          "На обратном пути внутренней кнопкой открой большие выходные ворота.",
+          "On the return route, use the inside button for the blast doors.",
+          "返回时按内部按钮打开防爆出口门。"
+        ]
+      }
+    ]
+  },
+  "arctic-research-base": {
+    "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2428742835",
+    "credit": "EIP Gaming / Mr. Workwell",
+    "steps": [
+      {
+        "image": "arctic-research-base-1.webp",
+        "photoSource": "https://eip.gg/wp-content/uploads/2022/08/Arctic-Research-base-Wide-1536x864.jpg",
+        "text": [
+          "Зачисти двор перед подходом к гаражам.",
+          "Clear the courtyard before approaching the garages.",
+          "接近车库前先清理院子。"
+        ]
+      },
+      {
+        "image": "arctic-research-base-2.webp",
+        "photoSource": "https://images.steamusercontent.com/ugc/2224276765863221164/EBA4B047D883EBCC965B028E90B7F95F5B19B55F/",
+        "text": [
+          "На схеме голубой рамкой обведены два гаража COBALT. Синие считыватели открывают комнату с лутом и гараж со снегоходом.",
+          "The cyan outlines mark the two COBALT garages. Blue readers open the loot room and the snowmobile garage.",
+          "图中青色边框标出两个COBALT车库。刷蓝卡可打开战利品房间和雪地摩托车库。"
+        ]
+      },
+      {
+        "image": "arctic-research-base-3.webp",
+        "photoSource": "https://eip.gg/wp-content/uploads/2022/08/Snow-Mobile-1024x576.jpg",
+        "text": [
+          "Второй гараж открывается той же синей картой. Внутри снегоход.",
+          "The second garage also takes blue and holds a snowmobile.",
+          "用同一张蓝卡打开第二个车库，里面有雪地摩托。"
+        ]
+      }
+    ]
+  },
+  "the-dome": {
+    "source": "https://whenisforcewiperust.com/dome-rust",
+    "credit": "When Is Force Wipe Rust",
+    "steps": [
+      {
+        "image": "the-dome-1.webp",
+        "photoSource": "https://whenisforcewiperust.com/wp-content/uploads/2026/08/dome-rust.jpg",
+        "text": [
+          "У начала подъёма найди металлическую будку. Щиток внутри.",
+          "At the climbing route, find the metal shed with the fuse box.",
+          "在攀爬起点找到带保险丝盒的金属小屋。"
+        ]
+      },
+      {
+        "image": "the-dome-2.webp",
+        "photoSource": "https://whenisforcewiperust.com/wp-content/uploads/2026/08/dome-rust.jpg",
+        "text": [
+          "Поставь предохранитель, выйди и включи переключатель на стене.",
+          "Fit a fuse, then enable the outside wall switch.",
+          "装入保险丝后，到外墙打开开关。"
+        ]
+      },
+      {
+        "image": "the-dome-3.webp",
+        "photoSource": "https://whenisforcewiperust.com/wp-content/uploads/2026/08/dome-rust-puzzle-recycler.jpg",
+        "text": [
+          "Вторая будка у резервуаров открывается зелёной картой. Внутри переработчик и синяя карта.",
+          "Use green at the shed by the tanks for recycler access and a blue card.",
+          "在储罐旁的小屋刷绿卡，可使用回收机并拿蓝卡。"
+        ]
+      }
+    ]
+  },
+  "radtown": {
+    "source": "https://www.corrosionhour.com/rust-radtown-monument-guide/",
+    "credit": "Corrosion Hour",
+    "steps": [
+      {
+        "image": "radtown-1.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2024/10/garagemain-min-1024x576.png",
+        "text": [
+          "Найди гаражное здание. Щиток и переключатель расположены с левой стороны.",
+          "Find the garage building; its fuse box and switch are on the left.",
+          "找到车库建筑，保险丝盒和开关在左侧。"
+        ]
+      },
+      {
+        "image": "radtown-2.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2024/10/gbackalley-min-1024x576.png",
+        "text": [
+          "После подачи питания поднимись по лестнице к верхним комнатам.",
+          "After enabling power, take the stairs to the upper rooms.",
+          "接通电源后，沿楼梯上到楼上房间。"
+        ]
+      },
+      {
+        "image": "radtown-3.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2024/10/gup1-min-1024x576.png",
+        "text": [
+          "В верхнем проходе поверни к двери со считывателем справа.",
+          "In the upper passage, find the card-reader door on the right.",
+          "在楼上通道中找到右侧带读卡器的门。"
+        ]
+      },
+      {
+        "image": "radtown-4.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/2024/10/gf2sr-min-1024x576.png",
+        "text": [
+          "Зелёная карта открывает комнату с ящиками, синей картой и фрагментом.",
+          "Use green to collect crates, a blue card and a fragment.",
+          "刷绿卡进入，拿箱子、蓝卡和碎片。"
+        ]
+      }
+    ]
+  },
+  "oil-rig": {
+    "source": "https://www.corrosionhour.com/rust-small-oil-rig-monument-guide/",
+    "credit": "Corrosion Hour",
+    "steps": [
+      {
+        "image": "oil-rig-1.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/03/small-oil-rig-monument-level-1/3772573549.jpg",
+        "text": [
+          "Высадись на причале и поднимайся по наружным лестницам.",
+          "Land at the dock and follow the outside stairs.",
+          "在码头登陆，沿外部楼梯上去。"
+        ]
+      },
+      {
+        "image": "oil-rig-2.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/03/small-oil-rig-monument-level-2/985631410.jpg",
+        "text": [
+          "Зачищай каждый этаж. Комнаты со считывателями видны у проходов.",
+          "Clear each floor and locate the rooms with card readers.",
+          "清理每一层，找到通道旁带读卡器的房间。"
+        ]
+      },
+      {
+        "image": "oil-rig-3.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/03/small-oil-rig-monument-level-3/2176026595.jpg",
+        "text": [
+          "У синей комнаты подай питание через щиток, затем проведи синей картой.",
+          "Power the blue-room circuit with a fuse, then use blue.",
+          "给蓝卡房间电路装入保险丝，然后刷蓝卡。"
+        ]
+      },
+      {
+        "image": "oil-rig-4.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/03/small-oil-rig-monument-level-4/2091400379.jpg",
+        "text": [
+          "На верхней палубе красная карта открывает комнату взламываемого ящика.",
+          "Use red at the top-deck room containing the locked crate.",
+          "在顶层刷红卡，进入上锁箱子的房间。"
+        ]
+      },
+      {
+        "image": "oil-rig-5.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/03/small-oil-rig-monument-level-4-heavy-scientist-a/802996538.jpg",
+        "text": [
+          "Запуск взлома вызывает тяжёлых учёных. Займи укрытие до прилёта вертолёта.",
+          "Starting the hack summons heavies; take cover before their helicopter arrives.",
+          "开始破解会召来重装科学家，直升机到达前先找掩体。"
+        ]
+      }
+    ]
+  },
+  "large-oil-rig": {
+    "source": "https://www.corrosionhour.com/rust-large-oil-rig-monument-guide/",
+    "credit": "Corrosion Hour",
+    "steps": [
+      {
+        "image": "large-oil-rig-1.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/large-oil-rig-monument-level-1/1358172780.jpg",
+        "text": [
+          "Зачищай платформу снизу вверх по наружным лестницам.",
+          "Clear the rig from the dock upward via its outer stairs.",
+          "从码头沿外部楼梯逐层清理平台。"
+        ]
+      },
+      {
+        "image": "large-oil-rig-2.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/large-oil-rig-monument-level-3/1675848712.jpg",
+        "text": [
+          "На этажах ищи комнаты с цветными считывателями, а не обычные открытые двери.",
+          "Look for rooms marked by coloured card readers.",
+          "在各层找到带彩色读卡器的房间。"
+        ]
+      },
+      {
+        "image": "large-oil-rig-3.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/large-oil-rig-monument-level-4/3967527112.jpg",
+        "text": [
+          "Зелёная карта открывает отдельную комнату с обычным лутом.",
+          "The green reader opens a separate loot room.",
+          "刷绿卡打开独立的战利品房间。"
+        ]
+      },
+      {
+        "image": "large-oil-rig-4.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/large-oil-rig-monument-level-5/4126152698.jpg",
+        "text": [
+          "Для синей комнаты сначала установи предохранитель в её цепь питания.",
+          "Fit a fuse into the blue-room power circuit before swiping.",
+          "先给蓝卡房间的供电电路装入保险丝，再刷卡。"
+        ]
+      },
+      {
+        "image": "large-oil-rig-5.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/large-oil-rig-monument-level-6/2965274111.jpg",
+        "text": [
+          "Наверху открой красной картой комнату с взламываемым ящиком.",
+          "Use red for the locked-crate room on the upper deck.",
+          "在顶层刷红卡进入上锁箱子的房间。"
+        ]
+      },
+      {
+        "image": "large-oil-rig-6.webp",
+        "photoSource": "https://www.corrosionhour.com/wp-content/uploads/cache/2019/04/rust-heavy-scientist-event-1/1535274585.jpg",
+        "text": [
+          "После запуска взлома прилетят тяжёлые учёные. Держи лестницы под контролем.",
+          "After starting the hack, hold the stairs against the arriving heavies.",
+          "启动破解后，守住楼梯应对抵达的重装科学家。"
+        ]
+      }
+    ]
+  }
+}

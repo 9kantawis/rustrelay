@@ -20,6 +20,9 @@ const { createHeatmapLoader } = require("./map-heatmaps.cjs");
 const { createPairing } = require("./rust-pairing.cjs");
 const { createSteamSignIn } = require("./steam-sign-in.cjs");
 
+const { createStateUpdates } = require("../shared/state-updates.cjs");
+const stateUpdate = createStateUpdates();
+
 const { sendDiscord } = require("./discord-notifications.cjs");
 
 app.setName("RustRelay");
@@ -253,7 +256,8 @@ if (ownsInstance)
       store,
       data,
       publish: (state) => {
-        if (!window.isDestroyed()) window.webContents.send("state", state);
+        if (!window.isDestroyed())
+          window.webContents.send("state", stateUpdate(state));
       },
       notify: (event, state, publicState) => {
         const kind = Object.hasOwn(state.settings.notificationKinds, event.kind)
@@ -297,7 +301,7 @@ if (ownsInstance)
       onChange(state) {
         service.live.signIn = state;
         if (!window.isDestroyed())
-          window.webContents.send("state", service.snapshot());
+          window.webContents.send("state", stateUpdate(service.snapshot()));
       },
     });
     pairing = createPairing({ service, signIn, report: reportPairing });
@@ -364,6 +368,12 @@ if (ownsInstance)
             "wiki.facepunch.com",
             "rust.wiki",
             "rust-data.com",
+            "www.rustafied.com",
+            "www.corrosionhour.com",
+            "jaguidesgaming.com",
+            "eip.gg",
+            "steamcommunity.com",
+            "whenisforcewiperust.com",
             "rust.facepunch.com",
             "github.com",
             "rustontop.com",

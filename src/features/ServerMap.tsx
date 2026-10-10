@@ -1,4 +1,5 @@
 import {
+  memo,
   useEffect,
   useMemo,
   useRef,
@@ -74,7 +75,7 @@ const categories = [
   ["horse", "Лошади"],
   ["stag", "Олени"],
 ];
-function MapGrid({
+const MapGrid = memo(function MapGrid({
   map,
   worldSize,
   scale,
@@ -146,12 +147,23 @@ function MapGrid({
         })}
     </svg>
   );
-}
+});
 export default function ServerMap({ state, runAction, navigateTo }: Props) {
   const viewport = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ width: 1, height: 1 });
   const [view, setView] = useState<View>(initialView);
   const viewRef = useRef(view);
+  const viewFrame = useRef(0);
+  const cursorUpdated = useRef(0);
+  function scheduleView(next: View) {
+    viewRef.current = next;
+    if (!viewFrame.current)
+      viewFrame.current = requestAnimationFrame(() => {
+        viewFrame.current = 0;
+        setView(viewRef.current);
+      });
+  }
+  useEffect(() => () => cancelAnimationFrame(viewFrame.current), []);
   const [dragging, setDragging] = useState(false);
   const drag = useRef<{
     id: number;
@@ -166,7 +178,11 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
   const [heatControls, setHeatControls] = useState(false);
   const [terrain, setTerrain] = useState(false);
   const [monuments, setMonuments] = useState(true);
-  const [routesVisible, setRoutesVisible] = useState(false);
+  const routesVisible = state.settings.showRoutes !== false;
+  const heatWasEnabled = useRef(false);
+  const terrainWasEnabled = useRef(false);
+  heatWasEnabled.current ||= heat;
+  terrainWasEnabled.current ||= terrain;
   const [routesOpen, setRoutesOpen] = useState(false);
   const [selectedRoutes, setSelectedRoutes] = useState<Set<string> | null>(
     null,
@@ -204,15 +220,19 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
     [elevation?.values],
   );
   const routeKey = currentMapKey(state);
-  const visibleRoutes = state.routes.filter(
-    (route) =>
-      route.serverId === state.connection.serverId &&
-      route.mapKey === routeKey &&
-      (selectedRoutes === null || selectedRoutes.has(route.id)),
+  const visibleRoutes = useMemo(
+    () =>
+      state.routes.filter(
+        (route) =>
+          route.serverId === state.connection.serverId &&
+          route.mapKey === routeKey &&
+          (selectedRoutes === null || selectedRoutes.has(route.id)),
+      ),
+    [state.routes, state.connection.serverId, routeKey, selectedRoutes],
   );
   const geometry = useRef({ size, image });
   geometry.current = { size, image };
-  viewRef.current = view;
+  if (!viewFrame.current) viewRef.current = view;
   const t = (text: string) => translate(state.settings.language, text);
   useEffect(() => {
     const element = viewport.current;
@@ -250,7 +270,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
         event.deltaY *
         (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? size.height : 1);
       const previous = viewRef.current;
-      setView(
+      scheduleView(
         zoomView(
           previous,
           previous.scale * Math.exp(-delta * (event.ctrlKey ? 0.008 : 0.0015)),
@@ -317,7 +337,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
       if (Math.hypot(dx, dy) > 4) active.moved = true;
       if (active.moved) {
         setDragging(true);
-        setView(
+        scheduleView(
           clampView(
             { ...active.start, x: active.start.x + dx, y: active.start.y + dy },
             size,
@@ -326,6 +346,8 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
         );
       }
     }
+    if (performance.now() - cursorUpdated.current < 80) return;
+    cursorUpdated.current = performance.now();
     const point = pointAt(event.clientX, event.clientY);
     const x =
       ((point.x * map!.width - map!.oceanMargin) /
@@ -336,7 +358,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
         (map!.height - map!.oceanMargin * 2)) *
       worldSize;
     setCursorGrid(gridLabel(x, y, worldSize));
-    setCursorHeight(
+    const height =
       elevation && elevationBytes
         ? readElevation(
             elevationBytes,
@@ -344,8 +366,8 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             x / worldSize,
             1 - y / worldSize,
           )
-        : null,
-    );
+        : null;
+    setCursorHeight(height === null ? null : Math.round(height));
   }
   function endDrag(event: PointerEvent<HTMLDivElement>) {
     const active = drag.current;
@@ -436,24 +458,24 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             aria-pressed={routesVisible}
             onClick={() => {
               setRoutesOpen(true);
-              setRoutesVisible(true);
+              void runAction("settings", { showRoutes: true });
             }}
           >
             <Route size={16} />
             Все маршруты
           </button>
+          <button
+            className={routesVisible ? "active" : ""}
+            aria-pressed={routesVisible}
+            onClick={() =>
+              void runAction("settings", { showRoutes: !routesVisible })
+            }
+          >
+            <Route size={16} />
+            Маршруты
+          </button>
         </div>
         <div className="map-utilities">
-          <Action
-            className={
-              state.tracking ? "secondary recording-button" : "secondary"
-            }
-            disabled={state.connection.status !== "connected"}
-            task={() => runAction("tracking", !state.tracking)}
-          >
-            <span className="record-dot" />
-            {state.tracking ? "Остановить запись" : "Записать маршрут"}
-          </Action>
           <button
             className="icon-button"
             title="Любимое место"
@@ -585,23 +607,29 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
             alt={`Карта ${state.info?.name || "сервера"}`}
             draggable={false}
           />
-          {terrain && elevation && (
+          {terrainWasEnabled.current && elevation && (
             <div
               className="map-terrain"
               style={{
+                display: terrain ? undefined : "none",
                 left: `${(margin / map.width) * 100}%`,
                 top: `${(margin / map.height) * 100}%`,
                 width: `${(1 - (margin * 2) / map.width) * 100}%`,
                 height: `${(1 - (margin * 2) / map.height) * 100}%`,
               }}
             >
-              <TerrainOverlay elevation={elevation} />
+              <TerrainOverlay
+                elevation={elevation}
+                pixels={map.width - margin * 2}
+                worldSize={worldSize}
+              />
             </div>
           )}
-          {heat && state.heatmap && (
+          {heatWasEnabled.current && state.heatmap && (
             <div
               className="map-density"
               style={{
+                display: heat ? undefined : "none",
                 left: `${(margin / map.width) * 100}%`,
                 top: `${(margin / map.height) * 100}%`,
                 width: `${(1 - (margin * 2) / map.width) * 100}%`,
@@ -609,6 +637,7 @@ export default function ServerMap({ state, runAction, navigateTo }: Props) {
               }}
             >
               <MapHeatmap
+                pixels={map.width - margin * 2}
                 heatmap={state.heatmap}
                 category={category}
                 opacity={opacity}

@@ -1,3 +1,4 @@
+import PuzzleWalkthrough from "./PuzzleWalkthrough";
 import { useMemo, useState } from "react";
 import { ArrowUpRight, BookOpen, ChevronRight, Search } from "lucide-react";
 import type { AppState, Language } from "../../shared/contracts";
@@ -138,6 +139,12 @@ export function MonumentDetails({
           </p>
         </div>
       </div>
+      <PuzzleWalkthrough
+        key={guide.id}
+        id={guide.id}
+        language={language}
+        runAction={runAction}
+      />
       {guide.puzzles.map((puzzle, index) => (
         <section className="monument-puzzle" key={index}>
           <div className="guide-section-heading">
@@ -162,74 +169,6 @@ export function MonumentDetails({
               </div>
             ))}
           </div>
-          <ol className="guide-steps">
-            {puzzle.fuses > 0 && (
-              <li>
-                <strong>
-                  {say("Подай питание", "Power the room", "接通电源")}
-                </strong>
-                <p>
-                  {say(
-                    "Найди щиток у входа в пазл. Вставь предохранитель в каждый нужный блок. Щитков:",
-                    "Find the fuse box by the puzzle entrance and insert a fuse in each required box. Fuse boxes:",
-                    "找到谜题入口附近的保险丝盒，并在每个所需盒子中插入保险丝。保险丝盒：",
-                  )}{" "}
-                  {puzzle.fuses}.
-                </p>
-              </li>
-            )}
-            {puzzle.switches > 0 && (
-              <li>
-                <strong>
-                  {say(
-                    "Включи переключатели",
-                    "Turn on the switches",
-                    "打开开关",
-                  )}
-                </strong>
-                <p>
-                  {say(
-                    "Проследи кабель от щитка и включи переключатели до прохода через дверь. Количество:",
-                    "Follow the cable from the fuse box and turn on the switches before going through the door. Switches:",
-                    "沿保险丝盒的电缆找到开关，在过门前开启。开关数量：",
-                  )}{" "}
-                  {puzzle.switches}.
-                </p>
-              </li>
-            )}
-            <li>
-              <strong>{say("Открой двери", "Open the doors", "打开门")}</strong>
-              <p>
-                {say(
-                  "Используй карту нужного цвета у считывателя. Не задерживайся между дверями: питание ограничено. Считывателей:",
-                  "Swipe the matching keycard at each reader. Keep moving between doors while power is available. Readers:",
-                  "在各读卡器刷对应颜色的卡。通电时间有限，及时通过各扇门。读卡器：",
-                )}{" "}
-                {puzzle.readers}.
-                {puzzle.doorTime &&
-                  " " +
-                    say("Дверь открыта:", "Door open:", "开门时间：") +
-                    " " +
-                    puzzle.doorTime}
-              </p>
-            </li>
-            <li>
-              <strong>
-                {say(
-                  "Забери лут и выйди",
-                  "Loot and leave",
-                  "拿走战利品并离开",
-                )}
-              </strong>
-              <p>
-                {say(
-                  "Проверь все комнаты из таблицы ниже, затем возвращайся к выходу. Перед выходом прислушайся: дверь могут ждать снаружи.",
-                  "Check the loot rooms listed below, then return to the exit. Listen before leaving, as someone may be waiting outside.",
-                  "检查下表中的战利品房间，然后返回出口。出门前听周围动静，可能有人在外等候。",
-                )}
-              </p>
-            </li>
-          </ol>
         </section>
       ))}
       {guide.loot.length > 0 && (

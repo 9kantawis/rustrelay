@@ -70,6 +70,7 @@ export interface RelaySettings {
   notificationKinds: Record<NotificationKind, boolean>;
   autoStart: boolean;
   closeToTray: boolean;
+  showRoutes: boolean;
   bot: boolean;
   discord: boolean;
   hasWebhook?: boolean;
@@ -90,7 +91,6 @@ export interface AppState {
   timers: Timer[];
   pins: Pin[];
   routes: MapRoute[];
-  tracking: boolean;
   account: { steamId: string } | null;
   requiresSignIn: boolean;
   settings: RelaySettings;
@@ -144,6 +144,10 @@ export interface AppState {
   pairError: string | null;
   hasPairing: boolean;
 }
+export type AppStateUpdate = Partial<AppState> & {
+  routeChanges?: { upsert: MapRoute[]; removed: string[] };
+};
+
 export const emptyState: AppState = {
   companion: null,
   signIn: null,
@@ -159,7 +163,6 @@ export const emptyState: AppState = {
   timers: [],
   pins: [],
   routes: [],
-  tracking: false,
   account: null,
   requiresSignIn: false,
   census: [],
@@ -177,6 +180,7 @@ export const emptyState: AppState = {
     },
     autoStart: false,
     closeToTray: true,
+    showRoutes: true,
     bot: false,
     discord: false,
   },
@@ -196,7 +200,7 @@ declare global {
   interface Window {
     relay?: {
       invoke: (action: string, payload?: unknown) => Promise<any>;
-      subscribe: (listener: (state: AppState) => void) => () => void;
+      subscribe: (listener: (state: AppStateUpdate) => void) => () => void;
     };
   }
 }

@@ -1,3 +1,5 @@
+import { simplifyLine } from "../../shared/map-overlays.cjs";
+import { memo, useMemo } from "react";
 import { Check, Route, Trash2 } from "lucide-react";
 import type { AppState, MapRoute } from "../../shared/contracts";
 import { worldPoint } from "../../shared/map.cjs";
@@ -12,7 +14,71 @@ export function currentMapKey(state: AppState) {
       )
     : "";
 }
-export function RouteLayer({
+const RouteLine = memo(function RouteLine({
+  route,
+  map,
+  worldSize,
+  pixelScale,
+}: {
+  route: MapRoute;
+  map: NonNullable<AppState["map"]>;
+  worldSize: number;
+  pixelScale: number;
+}) {
+  const points = useMemo<number[][]>(
+    () =>
+      simplifyLine(
+        route.points.map((point) => {
+          const p = worldPoint(point.x, point.y, map, worldSize);
+          return [p.x * map.width, p.y * map.height];
+        }),
+        1,
+      ),
+    [route, map, worldSize],
+  );
+  const d = useMemo(
+    () =>
+      points
+        .map((point, index) => (index ? "L" : "M") + point[0] + " " + point[1])
+        .join(""),
+    [points],
+  );
+  if (points.length < 2) return null;
+  const color = route.ended ? "#8dd3ff" : "#f9a566";
+  return (
+    <g>
+      <path
+        d={d}
+        fill="none"
+        stroke="#101b23"
+        strokeWidth={5}
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        d={d}
+        fill="none"
+        stroke={color}
+        strokeWidth={2.5}
+        vectorEffect="non-scaling-stroke"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {[points[0], points.at(-1)!].map((p, index) => (
+        <circle
+          key={index}
+          cx={p[0]}
+          cy={p[1]}
+          r={4 / pixelScale}
+          fill={index ? color : "#fff"}
+          stroke="#101b23"
+          strokeWidth={1.5}
+          vectorEffect="non-scaling-stroke"
+        />
+      ))}
+    </g>
+  );
+});
+export const RouteLayer = memo(function RouteLayer({
   routes,
   map,
   worldSize,
@@ -29,53 +95,18 @@ export function RouteLayer({
       viewBox={`0 0 ${map.width} ${map.height}`}
       aria-label="Маршруты на карте"
     >
-      {routes
-        .filter((route) => route.points.length > 1)
-        .map((route) => {
-          const points = route.points.map((point) => {
-            const p = worldPoint(point.x, point.y, map, worldSize);
-            return [p.x * map.width, p.y * map.height];
-          });
-          const d = points
-            .map((point, index) => (index ? "L" : "M") + point.join(" "))
-            .join("");
-          const color = route.ended ? "#8dd3ff" : "#f9a566";
-          return (
-            <g key={route.id}>
-              <path
-                d={d}
-                fill="none"
-                stroke="#101b23"
-                strokeWidth={5}
-                vectorEffect="non-scaling-stroke"
-              />
-              <path
-                d={d}
-                fill="none"
-                stroke={color}
-                strokeWidth={2.5}
-                vectorEffect="non-scaling-stroke"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              {[points[0], points.at(-1)!].map((p, index) => (
-                <circle
-                  key={index}
-                  cx={p[0]}
-                  cy={p[1]}
-                  r={4 / pixelScale}
-                  fill={index ? color : "#fff"}
-                  stroke="#101b23"
-                  strokeWidth={1.5}
-                  vectorEffect="non-scaling-stroke"
-                />
-              ))}
-            </g>
-          );
-        })}
+      {routes.map((route) => (
+        <RouteLine
+          key={route.id}
+          route={route}
+          map={map}
+          worldSize={worldSize}
+          pixelScale={pixelScale}
+        />
+      ))}
     </svg>
   );
-}
+});
 export default function MapRoutes({
   state,
   selected,

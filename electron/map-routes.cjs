@@ -19,7 +19,6 @@ function createRouteRecorder(data) {
     return true;
   }
   function record(server, info, members, now = Date.now()) {
-    if (!data.tracking) return finish();
     const player = members.find(
       (member) => String(member.steamId) === String(server.playerId),
     );

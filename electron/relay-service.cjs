@@ -11,6 +11,9 @@ function createService({
   heatmaps = async () => ({ status: "unavailable", heatmap: null }),
 }) {
   let pollTimer;
+  let teamTimer;
+  let teamSession = null;
+  let routeSaveTimer;
   const { createRouteRecorder } = require("./map-routes.cjs");
   const recorder = createRouteRecorder(data);
   let companion;
@@ -42,8 +45,25 @@ function createService({
       connection: { ...client.state },
     };
   }
-  function save() {
+  function flushRoutes() {
+    clearTimeout(routeSaveTimer);
+    routeSaveTimer = null;
     store.save(data);
+  }
+  function scheduleRouteSave() {
+    if (routeSaveTimer) return;
+    routeSaveTimer = setTimeout(() => {
+      try {
+        flushRoutes();
+      } catch {
+        client.state.error = "Не удалось сохранить маршрут";
+        publish(snapshot());
+      }
+    }, 15000);
+    routeSaveTimer.unref();
+  }
+  function save() {
+    flushRoutes();
     publish(snapshot());
   }
   function addEvent(kind, title, detail = "", alert = false) {
@@ -73,8 +93,9 @@ function createService({
     });
   }
   function disconnect() {
-    if (recorder.finish()) store.save(data);
+    if (recorder.finish() || routeSaveTimer) flushRoutes();
     clearInterval(pollTimer);
+    clearInterval(teamTimer);
     clearLive();
     client.disconnect();
     companion?.sync().catch(() => {});
@@ -104,7 +125,7 @@ function createService({
       (item) => item.id === client.state.serverId,
     );
     if (server && live.info && recorder.record(server, live.info, members))
-      store.save(data);
+      scheduleRouteSave();
   }
   function handleBroadcast(message) {
     try {
@@ -168,6 +189,30 @@ function createService({
     live.heatmap = result.heatmap;
     live.heatmapStatus = result.status;
     publish(snapshot());
+  }
+  async function refreshTeam() {
+    const session = client.session;
+    if (
+      client.state.status !== "connected" ||
+      refreshingSession === session ||
+      teamSession === session
+    )
+      return;
+    teamSession = session;
+    try {
+      const response = await client.request({ getTeamInfo: {} }, session);
+      if (session !== client.session) return;
+      compareTeam(response.teamInfo?.members || []);
+      live.teamLeader = response.teamInfo?.leaderSteamId;
+      live.mapNotes = [
+        ...(response.teamInfo?.mapNotes || []),
+        ...(response.teamInfo?.leaderMapNotes || []),
+      ];
+      publish(snapshot());
+    } catch {
+    } finally {
+      if (teamSession === session) teamSession = null;
+    }
   }
   async function refresh(initial = false) {
     const session = client.session;
@@ -295,7 +340,8 @@ function createService({
       const session = client.session;
       await refresh(true);
       if (session !== client.session) return snapshot();
-      pollTimer = setInterval(() => refresh(), data.tracking ? 5000 : 20000);
+      pollTimer = setInterval(() => refresh(), 20000);
+      teamTimer = setInterval(() => refreshTeam(), 5000);
       return snapshot();
     },
     disconnect,
@@ -397,6 +443,7 @@ function createService({
         "overlayNotifications",
         "autoStart",
         "closeToTray",
+        "showRoutes",
         "bot",
         "discord",
       ])
@@ -453,14 +500,6 @@ function createService({
         x: input.x,
         y: input.y,
       });
-      save();
-    },
-    tracking(enabled) {
-      data.tracking = Boolean(enabled);
-      if (!data.tracking) recorder.finish();
-      clearInterval(pollTimer);
-      if (client.state.status === "connected")
-        pollTimer = setInterval(() => refresh(), data.tracking ? 5000 : 20000);
       save();
     },
     deleteRoute(id) {

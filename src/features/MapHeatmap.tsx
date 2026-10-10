@@ -1,8 +1,7 @@
-import { useMemo, type CSSProperties } from "react";
+import { memo, type CSSProperties } from "react";
 import { Apple, Leaf, PawPrint, Trees, type LucideIcon } from "lucide-react";
 import type { AppState, Language } from "../../shared/contracts";
-import { densityPeaks } from "../../shared/heatmap.cjs";
-import { contourPath } from "../../shared/map-overlays.cjs";
+import { useMapRaster } from "../components/MapRaster";
 import { translate } from "../localization";
 import ItemIcon from "../components/ItemIcon";
 
@@ -11,6 +10,7 @@ type Props = {
   category: string;
   opacity: number;
   language: Language;
+  pixels: number;
 };
 function resourceStyle(category: string): {
   color: string;
@@ -61,56 +61,32 @@ export function HeatmapLegend({ category }: { category: string }) {
     </div>
   );
 }
-export default function MapHeatmap({
+export default memo(function MapHeatmap({
   heatmap,
   category,
   opacity,
   language,
+  pixels,
 }: Props) {
-  const values = useMemo(
-    () =>
-      Uint8Array.from(atob(heatmap.categories[category] || ""), (c) =>
-        c.charCodeAt(0),
-      ),
-    [heatmap.categories[category]],
-  );
-  const contours = useMemo(
-    () =>
-      [40, 110, 195].map((threshold) =>
-        contourPath(values, heatmap.resolution, threshold),
-      ),
-    [values, heatmap.resolution],
-  );
-  const zones = useMemo(
-    () => densityPeaks(values, heatmap.resolution),
-    [values, heatmap.resolution],
-  );
   const { color } = resourceStyle(category);
+  const { canvas, zones, loading } = useMapRaster({
+    kind: "heat",
+    values: heatmap.categories[category] || "",
+    resolution: heatmap.resolution,
+    pixels,
+    color,
+  });
   return (
     <div
       className="density-layer"
       style={{ opacity, "--resource-color": color } as CSSProperties}
+      aria-busy={loading}
     >
-      <svg
-        className="heatmap-contours"
-        viewBox={`0 0 ${heatmap.resolution} ${heatmap.resolution}`}
-        preserveAspectRatio="none"
+      <canvas
+        ref={canvas}
+        className="map-raster heatmap-raster"
         aria-hidden="true"
-      >
-        {contours.map((d, index) => (
-          <path
-            key={index}
-            d={d}
-            fill={color}
-            fillOpacity={[0.1, 0.18, 0.28][index]}
-            stroke={color}
-            strokeOpacity={[0.2, 0.45, 0.8][index]}
-            strokeWidth={0.8}
-            vectorEffect="non-scaling-stroke"
-            fillRule="evenodd"
-          />
-        ))}
-      </svg>
+      />
       {zones.map((zone, index) => (
         <span
           key={index}
@@ -124,4 +100,4 @@ export default function MapHeatmap({
       ))}
     </div>
   );
-}
+});
