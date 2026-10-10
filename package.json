@@ -72,7 +72,7 @@
     "protobufjs": "^7.6.6",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "translate": "^1.4.1",
+    "translate": "^3.0.0",
     "ws": "^8.22.0"
   },
   "devDependencies": {
