@@ -1,0 +1,134 @@
+{
+  "afk": {
+    "example": "afk",
+    "description": "Кто отошёл от игры"
+  },
+  "alive": {
+    "example": "alive",
+    "description": "Как долго живут участники команды"
+  },
+  "connection": {
+    "example": "connection",
+    "description": "История входов игрока"
+  },
+  "connections": {
+    "example": "connections",
+    "description": "История подключений команды"
+  },
+  "craft": {
+    "example": "craft rocket 2",
+    "description": "Ресурсы на крафт"
+  },
+  "death": {
+    "example": "death",
+    "description": "Последняя смерть"
+  },
+  "deaths": {
+    "example": "deaths",
+    "description": "История смертей"
+  },
+  "decay": {
+    "example": "decay stone 500",
+    "description": "Оставшееся время гниения"
+  },
+  "despawn": {
+    "example": "despawn rocket",
+    "description": "Время исчезновения предмета"
+  },
+  "leader": {
+    "example": "leader",
+    "description": "Лидер команды"
+  },
+  "marker": {
+    "example": "marker add base",
+    "description": "Сохранить свою позицию как метку"
+  },
+  "markers": {
+    "example": "markers",
+    "description": "Сохранённые метки"
+  },
+  "mute": {
+    "example": "mute",
+    "description": "Приостановить ответы в чате"
+  },
+  "note": {
+    "example": "note add raid at A1",
+    "description": "Добавить заметку"
+  },
+  "notes": {
+    "example": "notes",
+    "description": "Сохранённые заметки"
+  },
+  "offline": {
+    "example": "offline",
+    "description": "Кого нет на сервере"
+  },
+  "online": {
+    "example": "online",
+    "description": "Кто сейчас на сервере"
+  },
+  "pop": {
+    "example": "pop",
+    "description": "Игроки и очередь сервера"
+  },
+  "prox": {
+    "example": "prox",
+    "description": "Ближайшие участники команды"
+  },
+  "recycle": {
+    "example": "recycle metal pipe 10",
+    "description": "Результат переработки"
+  },
+  "research": {
+    "example": "research rocket",
+    "description": "Стоимость изучения"
+  },
+  "stack": {
+    "example": "stack wood",
+    "description": "Размер стака предмета"
+  },
+  "steamid": {
+    "example": "steamid",
+    "description": "Steam ID участника"
+  },
+  "team": {
+    "example": "team",
+    "description": "Состав команды"
+  },
+  "time": {
+    "example": "time",
+    "description": "Время, рассвет и закат"
+  },
+  "timer": {
+    "example": "timer add 10m raid",
+    "description": "Создать таймер"
+  },
+  "timers": {
+    "example": "timers",
+    "description": "Активные таймеры"
+  },
+  "tr": {
+    "example": "tr en привет",
+    "description": "Перевести текст"
+  },
+  "trf": {
+    "example": "trf ru en привет",
+    "description": "Перевести между языками"
+  },
+  "unmute": {
+    "example": "unmute",
+    "description": "Возобновить ответы в чате"
+  },
+  "upkeep": {
+    "example": "upkeep",
+    "description": "Запас ресурсов в шкафах"
+  },
+  "uptime": {
+    "example": "uptime",
+    "description": "Время работы соединения"
+  },
+  "wipe": {
+    "example": "wipe",
+    "description": "Дата последнего вайпа"
+  }
+}

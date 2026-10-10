@@ -1,0 +1,101 @@
+{
+  "name": "rust-relay",
+  "version": "0.1.7",
+  "private": true,
+  "description": "Free Rust+ companion for Windows",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "start": "electron .",
+    "package": "npm run build && electron-builder --win nsis --x64 --publish never"
+  },
+  "build": {
+    "appId": "local.rustrelay.desktop",
+    "productName": "RustRelay",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "shared/**/*",
+      "package.json",
+      "LICENSE",
+      "!electron/vendor/rustplusplus/docs/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signExecutable": false,
+      "icon": "electron/assets/app.ico",
+      "executableName": "RustRelay"
+    },
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**",
+      "node_modules/@snazzah/**"
+    ],
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": false,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "RustRelay",
+      "artifactName": "RustRelay-Setup.exe"
+    }
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.6.3",
+    "@discordjs/voice": "^0.19.2",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@formatjs/intl": "^2.10.15",
+    "@liamcottle/rustplus.js": "2.5.0",
+    "axios": "^1.20.0",
+    "discord-api-types": "^0.38.56",
+    "discord.js": "^14.27.0",
+    "ffmpeg-static": "^5.3.0",
+    "jimp": "^0.22.12",
+    "libsodium-wrappers": "^0.7.16",
+    "lodash": "^4.18.1",
+    "lucide-react": "^1.54.0",
+    "opusscript": "^0.0.8",
+    "protobufjs": "^7.6.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "translate": "^1.4.1",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "overrides": {
+    "protobufjs": "^7.6.6",
+    "request": "npm:@cypress/request@4.0.1",
+    "form-data": "^4.0.6",
+    "tough-cookie": "^5.1.2",
+    "qs": "^6.15.2"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "9kantawis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9kantawis/rustrelay.git"
+  },
+  "homepage": "https://github.com/9kantawis/rustrelay"
+}

@@ -1,0 +1,850 @@
+{
+  "categories": {
+    "bear": [
+      "assets/rust.ai/agents/bear/bear.population.asset",
+      "assets/rust.ai/agents/bear/polarbear.population.asset"
+    ],
+    "berries": [
+      "assets/content/properties/spawnpopulation/jungle-plant-berry-blue.asset",
+      "assets/content/properties/spawnpopulation/jungle-plant-berry-green.asset",
+      "assets/content/properties/spawnpopulation/jungle-plant-berry-red.asset",
+      "assets/content/properties/spawnpopulation/jungle-plant-berry-white.asset",
+      "assets/content/properties/spawnpopulation/jungle-plant-berry-yellow.asset",
+      "assets/content/properties/spawnpopulation/plant-berry-blue.asset",
+      "assets/content/properties/spawnpopulation/plant-berry-green.asset",
+      "assets/content/properties/spawnpopulation/plant-berry-red.asset",
+      "assets/content/properties/spawnpopulation/plant-berry-white.asset",
+      "assets/content/properties/spawnpopulation/plant-berry-yellow.asset"
+    ],
+    "boar": [
+      "assets/rust.ai/agents/boar/boar.population.asset"
+    ],
+    "chicken": [
+      "assets/rust.ai/agents/chicken/chicken.population.asset"
+    ],
+    "corn": [
+      "assets/content/properties/spawnpopulation/plant-corn.asset"
+    ],
+    "crocodile": [
+      "assets/rust.ai/agents/crocodile/crocodile.population.asset"
+    ],
+    "flowers": [
+      "assets/content/properties/spawnpopulation/plant-orchid.asset",
+      "assets/content/properties/spawnpopulation/plant-rose.asset",
+      "assets/content/properties/spawnpopulation/plant-sunflower.asset"
+    ],
+    "hab": [
+      "assets/prefabs/deployable/hot air balloon/hab.population.asset"
+    ],
+    "hemp": [
+      "assets/content/properties/spawnpopulation/collectable-resource-hemp.asset",
+      "assets/content/properties/spawnpopulation/jungle-collectable-resource-hemp.asset"
+    ],
+    "horse": [
+      "assets/content/vehicles/horse/ridablehorse.population.asset"
+    ],
+    "junkpiles": [
+      "assets/content/properties/spawnpopulation/junkpiles.asset",
+      "assets/content/properties/spawnpopulation/junkpiles_water.asset"
+    ],
+    "logs": [
+      "assets/content/properties/spawnpopulation/driftwood.asset",
+      "assets/content/properties/spawnpopulation/logs_dry.asset",
+      "assets/content/properties/spawnpopulation/logs_snow.asset",
+      "assets/content/properties/spawnpopulation/logs_wet.asset",
+      "assets/content/properties/spawnpopulation/wood_log_pile.asset"
+    ],
+    "modularcar": [
+      "assets/content/vehicles/modularcar/modularcar.population.asset"
+    ],
+    "mushroom": [
+      "assets/content/properties/spawnpopulation/collectable-food-mushroom.asset"
+    ],
+    "ores": [
+      "assets/content/properties/spawnpopulation/ores.asset",
+      "assets/content/properties/spawnpopulation/ores_sand.asset",
+      "assets/content/properties/spawnpopulation/ores_snow.asset",
+      "assets/content/properties/spawnpopulation/v3_ores_jungle.asset"
+    ],
+    "pedalbike": [
+      "assets/content/vehicles/bikes/pedalbikes_world.population.asset"
+    ],
+    "potato": [
+      "assets/content/properties/spawnpopulation/plant-potato.asset"
+    ],
+    "pumpkin": [
+      "assets/content/properties/spawnpopulation/plant-pumpkin.asset"
+    ],
+    "rowboat": [
+      "assets/content/vehicles/boats/rowboat/rowboat.population.asset"
+    ],
+    "snake": [
+      "assets/rust.ai/agents/snake/snake.population.asset"
+    ],
+    "stag": [
+      "assets/rust.ai/agents/stag/stag.population.asset"
+    ],
+    "tiger": [
+      "assets/rust.ai/agents/tiger/tiger.population.asset"
+    ],
+    "wheat": [
+      "assets/content/properties/spawnpopulation/plant-wheat.asset"
+    ],
+    "wolf": [
+      "assets/rust.ai/agents/wolf/wolf.population.asset"
+    ],
+    "wood": [
+      "assets/content/properties/spawnpopulation/collectable-resource-wood.asset"
+    ],
+    "trees": [
+      "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest_saplings.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest_snow.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_dense.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_light.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_superdense.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_bushes_arctic_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_bushes_arctic_forestside.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_bushes_temp_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_bushes_temp_forestside.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_jungle_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_jungle_forest_saplings.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_temp_beachforest_small.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_temp_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_deciduous.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_small.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_small_deciduous.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest_saplings.asset",
+      "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest_small.asset"
+    ]
+  },
+  "rules": [
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/collectable-food-mushroom.asset",
+      "name": "collectable-food-mushroom",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": -10,
+      "splat_mask": 32,
+      "filter_cutoff": 0,
+      "target_density": 80
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/collectable-resource-hemp.asset",
+      "name": "collectable-resource-hemp",
+      "topology_any": 33,
+      "topology_all": 0,
+      "topology_not": 33385110,
+      "biome_mask": 6,
+      "splat_mask": 49,
+      "filter_cutoff": 0,
+      "target_density": 80
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/collectable-resource-wood.asset",
+      "name": "collectable-resource-wood",
+      "topology_any": 4358507,
+      "topology_all": 0,
+      "topology_not": 29190804,
+      "biome_mask": -9,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 40
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/driftwood.asset",
+      "name": "driftwood",
+      "topology_any": 24,
+      "topology_all": 0,
+      "topology_not": 2752418,
+      "biome_mask": -1,
+      "splat_mask": 5,
+      "filter_cutoff": 0,
+      "target_density": 5000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-collectable-resource-hemp.asset",
+      "name": "jungle-collectable-resource-hemp",
+      "topology_any": 33,
+      "topology_all": 0,
+      "topology_not": 33385110,
+      "biome_mask": 16,
+      "splat_mask": 49,
+      "filter_cutoff": 0,
+      "target_density": 80
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-plant-berry-blue.asset",
+      "name": "jungle-plant-berry-blue",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-plant-berry-green.asset",
+      "name": "jungle-plant-berry-green",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-plant-berry-red.asset",
+      "name": "jungle-plant-berry-red",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-plant-berry-white.asset",
+      "name": "jungle-plant-berry-white",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/jungle-plant-berry-yellow.asset",
+      "name": "jungle-plant-berry-yellow",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/junkpiles.asset",
+      "name": "junkpiles",
+      "topology_any": 4096,
+      "topology_all": 0,
+      "topology_not": 33378198,
+      "biome_mask": -1,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 50
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/junkpiles_water.asset",
+      "name": "junkpiles_water",
+      "topology_any": 262144,
+      "topology_all": 0,
+      "topology_not": 0,
+      "biome_mask": -9,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 8
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/logs_dry.asset",
+      "name": "logs_dry",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 4029062,
+      "biome_mask": -12,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 2500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/logs_snow.asset",
+      "name": "logs_snow",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 4029062,
+      "biome_mask": -8,
+      "splat_mask": 2,
+      "filter_cutoff": 0,
+      "target_density": 2500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/logs_wet.asset",
+      "name": "logs_wet",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 4029062,
+      "biome_mask": -14,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 2500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/ores.asset",
+      "name": "ores",
+      "topology_any": 20972032,
+      "topology_all": 0,
+      "topology_not": 3923354,
+      "biome_mask": 6,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 1700
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/ores_sand.asset",
+      "name": "ores_sand",
+      "topology_any": 20972032,
+      "topology_all": 0,
+      "topology_not": 3923354,
+      "biome_mask": 1,
+      "splat_mask": 204,
+      "filter_cutoff": 0,
+      "target_density": 1750
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/ores_snow.asset",
+      "name": "ores_snow",
+      "topology_any": 20972032,
+      "topology_all": 0,
+      "topology_not": 3923354,
+      "biome_mask": 8,
+      "splat_mask": 202,
+      "filter_cutoff": 0,
+      "target_density": 1000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-berry-blue.asset",
+      "name": "plant-berry-blue",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 6,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-berry-green.asset",
+      "name": "plant-berry-green",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 6,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-berry-red.asset",
+      "name": "plant-berry-red",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 6,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-berry-white.asset",
+      "name": "plant-berry-white",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 6,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-berry-yellow.asset",
+      "name": "plant-berry-yellow",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": 6,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-corn.asset",
+      "name": "plant-corn",
+      "topology_any": 163840,
+      "topology_all": 0,
+      "topology_not": 33385374,
+      "biome_mask": -9,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-orchid.asset",
+      "name": "plant-orchid",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": -10,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 2
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-potato.asset",
+      "name": "plant-potato",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": -10,
+      "splat_mask": 32,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-pumpkin.asset",
+      "name": "plant-pumpkin",
+      "topology_any": 163840,
+      "topology_all": 0,
+      "topology_not": 33385374,
+      "biome_mask": -9,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-rose.asset",
+      "name": "plant-rose",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": -10,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 3
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-sunflower.asset",
+      "name": "plant-sunflower",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 33385094,
+      "biome_mask": -10,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 4
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/plant-wheat.asset",
+      "name": "plant-wheat",
+      "topology_any": 163840,
+      "topology_all": 0,
+      "topology_not": 33385374,
+      "biome_mask": -9,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest.asset",
+      "name": "procmap_v3_arctic_forest",
+      "topology_any": 1,
+      "topology_all": 0,
+      "topology_not": 2968062,
+      "biome_mask": 8,
+      "splat_mask": 18,
+      "filter_cutoff": 0,
+      "target_density": 1000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest_saplings.asset",
+      "name": "procmap_v3_arctic_forest_saplings",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 7949714,
+      "biome_mask": 8,
+      "splat_mask": 50,
+      "filter_cutoff": 0,
+      "target_density": 7500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arctic_forest_snow.asset",
+      "name": "procmap_v3_arctic_forest_snow",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 4016607,
+      "biome_mask": 8,
+      "splat_mask": 2,
+      "filter_cutoff": 0,
+      "target_density": 10000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_dense.asset",
+      "name": "procmap_v3_arid_palms_dense",
+      "topology_any": 245768,
+      "topology_all": 0,
+      "topology_not": 4008695,
+      "biome_mask": 1,
+      "splat_mask": 20,
+      "filter_cutoff": 0,
+      "target_density": 5000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_light.asset",
+      "name": "procmap_v3_arid_palms_light",
+      "topology_any": 163915,
+      "topology_all": 0,
+      "topology_not": 4025014,
+      "biome_mask": 1,
+      "splat_mask": 16,
+      "filter_cutoff": 0,
+      "target_density": 600
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_arid_palms_superdense.asset",
+      "name": "procmap_v3_arid_palms_superdense",
+      "topology_any": 4325416,
+      "topology_all": 0,
+      "topology_not": 4024452,
+      "biome_mask": 1,
+      "splat_mask": 32,
+      "filter_cutoff": 0,
+      "target_density": 10000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_bushes_arctic_forest.asset",
+      "name": "procmap_v3_bushes_arctic_forest",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 19745234,
+      "biome_mask": 8,
+      "splat_mask": 50,
+      "filter_cutoff": 0,
+      "target_density": 2000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_bushes_arctic_forestside.asset",
+      "name": "procmap_v3_bushes_arctic_forestside",
+      "topology_any": 64,
+      "topology_all": 0,
+      "topology_not": 2967986,
+      "biome_mask": 8,
+      "splat_mask": 52,
+      "filter_cutoff": 0,
+      "target_density": 10000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_bushes_temp_forest.asset",
+      "name": "procmap_v3_bushes_temp_forest",
+      "topology_any": 33554464,
+      "topology_all": 0,
+      "topology_not": 7949970,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 750
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_bushes_temp_forestside.asset",
+      "name": "procmap_v3_bushes_temp_forestside",
+      "topology_any": 64,
+      "topology_all": 0,
+      "topology_not": 3754882,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 7500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_jungle_forest.asset",
+      "name": "procmap_v3_jungle_forest",
+      "topology_any": 32,
+      "topology_all": 32,
+      "topology_not": 2975966,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_jungle_forest_saplings.asset",
+      "name": "procmap_v3_jungle_forest_saplings",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 2707346,
+      "biome_mask": 16,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 13500
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_temp_beachforest_small.asset",
+      "name": "procmap_v3_temp_beachforest_small",
+      "topology_any": 163848,
+      "topology_all": 0,
+      "topology_not": 7170183,
+      "biome_mask": 2,
+      "splat_mask": 16,
+      "filter_cutoff": 0,
+      "target_density": 7000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_temp_forest.asset",
+      "name": "procmap_v3_temp_forest",
+      "topology_any": 32,
+      "topology_all": 32,
+      "topology_not": 36530398,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 20000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_deciduous.asset",
+      "name": "procmap_v3_temp_forest_deciduous",
+      "topology_any": 33554432,
+      "topology_all": 0,
+      "topology_not": 2975966,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 20000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_small.asset",
+      "name": "procmap_v3_temp_forest_small",
+      "topology_any": 64,
+      "topology_all": 0,
+      "topology_not": 36530366,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 10000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_temp_forest_small_deciduous.asset",
+      "name": "procmap_v3_temp_forest_small_deciduous",
+      "topology_any": 33554496,
+      "topology_all": 33554432,
+      "topology_not": 2975934,
+      "biome_mask": 2,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 15000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest.asset",
+      "name": "procmap_v3_tundra_forest",
+      "topology_any": 32,
+      "topology_all": 0,
+      "topology_not": 2975898,
+      "biome_mask": 4,
+      "splat_mask": 32,
+      "filter_cutoff": 0,
+      "target_density": 25000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest_saplings.asset",
+      "name": "procmap_v3_tundra_forest_saplings",
+      "topology_any": 96,
+      "topology_all": 0,
+      "topology_not": 2707346,
+      "biome_mask": 4,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 12000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/procmap_v3_tundra_forest_small.asset",
+      "name": "procmap_v3_tundra_forest_small",
+      "topology_any": 64,
+      "topology_all": 0,
+      "topology_not": 2975898,
+      "biome_mask": 4,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 13000
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/v3_ores_jungle.asset",
+      "name": "v3_ores_jungle",
+      "topology_any": 20972032,
+      "topology_all": 0,
+      "topology_not": 3800976,
+      "biome_mask": 16,
+      "splat_mask": 249,
+      "filter_cutoff": 0,
+      "target_density": 1750
+    },
+    {
+      "asset_path": "assets/content/properties/spawnpopulation/wood_log_pile.asset",
+      "name": "wood_log_pile",
+      "topology_any": 8289,
+      "topology_all": 0,
+      "topology_not": 1098644886,
+      "biome_mask": 14,
+      "splat_mask": 50,
+      "filter_cutoff": 0,
+      "target_density": 480
+    },
+    {
+      "asset_path": "assets/content/vehicles/bikes/pedalbikes_world.population.asset",
+      "name": "PedalBikes_World.Population",
+      "topology_any": 2048,
+      "topology_all": 0,
+      "topology_not": 1106240414,
+      "biome_mask": 23,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/content/vehicles/boats/rowboat/rowboat.population.asset",
+      "name": "Rowboat.Population",
+      "topology_any": 246016,
+      "topology_all": 16,
+      "topology_not": 520,
+      "biome_mask": -9,
+      "splat_mask": -11,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/content/vehicles/horse/ridablehorse.population.asset",
+      "name": "RidableHorse.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 1106079654,
+      "biome_mask": 3,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 1
+    },
+    {
+      "asset_path": "assets/content/vehicles/modularcar/modularcar.population.asset",
+      "name": "ModularCar.Population",
+      "topology_any": 6144,
+      "topology_all": 0,
+      "topology_not": 1106240414,
+      "biome_mask": 23,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/prefabs/deployable/hot air balloon/hab.population.asset",
+      "name": "HAB.Population",
+      "topology_any": 1052673,
+      "topology_all": 0,
+      "topology_not": 15712698,
+      "biome_mask": 11,
+      "splat_mask": 247,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/bear/bear.population.asset",
+      "name": "Bear.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 6,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/bear/polarbear.population.asset",
+      "name": "PolarBear.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 8,
+      "splat_mask": 2,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/boar/boar.population.asset",
+      "name": "Boar.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 3,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/chicken/chicken.population.asset",
+      "name": "Chicken.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 2,
+      "splat_mask": 53,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/crocodile/crocodile.population.asset",
+      "name": "Crocodile.Population",
+      "topology_any": 172032,
+      "topology_all": 0,
+      "topology_not": 0,
+      "biome_mask": 16,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/snake/snake.population.asset",
+      "name": "Snake.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32853918,
+      "biome_mask": 16,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/stag/stag.population.asset",
+      "name": "Stag.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862086,
+      "biome_mask": -10,
+      "splat_mask": 48,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/tiger/tiger.population.asset",
+      "name": "Tiger.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 16,
+      "splat_mask": -1,
+      "filter_cutoff": 0,
+      "target_density": 0
+    },
+    {
+      "asset_path": "assets/rust.ai/agents/wolf/wolf.population.asset",
+      "name": "Wolf.Population",
+      "topology_any": 4294967295,
+      "topology_all": 0,
+      "topology_not": 32862110,
+      "biome_mask": 7,
+      "splat_mask": -9,
+      "filter_cutoff": 0,
+      "target_density": 0
+    }
+  ]
+}

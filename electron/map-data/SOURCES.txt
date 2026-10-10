@@ -1,0 +1,6 @@
+Resource spawn filters adapted from Cooperkit/Rustmap-Parser (MIT).
+https://github.com/Cooperkit/Rustmap-Parser
+Source data: src/rustmap_parser/data/spawn_rules.json, retrieved 2026-10-09.
+The layer represents procedural spawn suitability, not currently spawned entities.
+The world file format follows Facepunch's Rust.World SDK.
+https://github.com/Facepunch/Rust.World

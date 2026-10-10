@@ -1,0 +1,22 @@
+node_modules/
+dist/
+release/
+*.log
+*.tsbuildinfo
+qa/
+
+.superpowers/
+playwright-report/
+test-results/
+
+test-results-packaged/
+
+# Local profiles and private configuration
+vault.bin
+vault.bin.*
+.env
+.env.*
+!.env.example
+map-cache/
+user-data/
+*.map
